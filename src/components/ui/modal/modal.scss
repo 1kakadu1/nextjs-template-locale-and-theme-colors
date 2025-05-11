@@ -1,0 +1,115 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    justify-content: center;
+    display: flex;
+    z-index: -1;
+    visibility: hidden;
+    transition: all 300ms ease;
+    overflow: hidden;
+
+    &.portal {
+        position: absolute;
+    }
+
+    &_active {
+        z-index: 2000;
+        visibility: visible;
+
+        & .modal-overlay {
+            opacity: 1;
+        }
+
+        .modal-content.modal-content__animate-left {
+            transform: translateX(0%);
+            transition: transform 300ms ease;
+        }
+
+        .modal-content.modal-content__animate-right {
+            transform: translateX(0%);
+            transition: transform 300ms ease;
+        }
+
+        .modal-content.modal-content__animate-fade {
+            opacity: 1;
+            transition: opacity 300ms ease;
+        }
+    }
+
+    &_center {
+        align-items: center;
+    }
+
+    &_end {
+        align-items: flex-end;
+    }
+
+    &_start {
+        align-items: flex-start;
+    }
+
+    &_justify-center {
+        justify-content: center;
+    }
+
+    &_justify-end {
+        justify-content: flex-end;
+    }
+
+    &_justify-start {
+        justify-content: flex-start;
+    }
+
+    &-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: 99;
+        background: rgba(87, 87, 87, 0.8);
+        opacity: 0;
+        transition: opacity 300ms ease;
+    }
+
+    &-content {
+        padding: toRem(40) toRem(16) toRem(32) toRem(16);
+        position: relative;
+        z-index: 100;
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0px 4px 6px 0px var(--Gray-G5, rgba(73, 73, 73, 0.05));
+        margin: 0 15px;
+        @media (min-width: 768px) {
+         padding: toRem(48) toRem(64) toRem(32) toRem(64);
+         border-radius: 32px;   
+        }
+        &.modal-content__animate-left {
+            transform: translateX(-100%);
+            transition: transform 300ms ease;
+        }
+
+        &.modal-content__animate-right {
+            transform: translateX(100%);
+            transition: transform 300ms ease;
+        }
+
+        &.modal-content__animate-fade {
+            opacity: 0;
+            transition: opacity 300ms ease;
+        }
+    }
+
+    &-close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 104;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}

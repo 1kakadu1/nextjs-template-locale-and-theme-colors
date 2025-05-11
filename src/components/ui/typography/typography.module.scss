@@ -1,0 +1,44 @@
+
+.h1{
+    @include fontSize(32,64);
+    font-weight: 700;
+    line-height: 100%;
+    color: var(--primary);
+}
+
+.h2{
+    @include fontSize(40,64);
+    font-weight: 700;
+    line-height: 100%;
+    color: var(--primary);
+}
+
+.h3{
+    @include fontSize(20,24);
+    font-weight: 600;
+    line-height: 110%;
+    color: var(--primary);
+}
+
+.p{
+    @include fontSize(16,18);
+    font-weight: 500;
+    line-height: 160%;
+    color: var(--text);
+}
+
+.white{
+    color: var(--primary);
+}
+
+.dark{
+    color: var(--Text-Dark-Primary);
+}
+
+.dark-light{
+    color: var(--Text-Dark-Secondary);
+}
+
+.gray{
+    color: var(--Text-White-Secondary);
+}

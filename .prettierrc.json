@@ -1,0 +1,27 @@
+{
+    "bracketSpacing": true,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "useTabs": true,
+    "plugins": ["@trivago/prettier-plugin-sort-imports"],
+    "importOrder": [
+        "/@types",  
+        ".model",
+        "/const",
+        ".schema", 
+        ".context", 
+        "@/components/", 
+        ".component", 
+        "@/hooks/",
+        "ui/icons",
+        "services/", 
+        "utils",
+        "assets/",
+        "^[./]",
+        "(.scss|.css)"
+      ],
+      "importOrderSeparation": false,
+      "importOrderSortSpecifiers": true
+    
+}

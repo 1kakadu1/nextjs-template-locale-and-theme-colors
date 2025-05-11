@@ -1,0 +1,14 @@
+{
+	"base": {
+		"menu": {
+			"home": "Home",
+			"blog": "Blog",
+			"contacts": "Contacts"
+		}
+	},
+	"forms":{
+		"fields":{
+			"search": "Search"
+		}
+	}
+}

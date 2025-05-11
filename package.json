@@ -6,20 +6,29 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format:check": "npx prettier --list-different --ignore-path=.gitignore \"**/*.ts(x)?\"",
+    "format:fix": "npx prettier --list-different --ignore-path=.gitignore \"**/*.ts(x)?\" --write",
+    "pre-commit": "npm run format:fix && npm run format:check && npm run build",
+    "nc": "hygen new component"
   },
   "dependencies": {
+    "next": "15.1.7",
+    "next-intl": "^4.1.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
-    "@eslint/eslintrc": "^3"
+    "hygen": "^6.2.11",
+    "prettier": "^3.5.2",
+    "sass": "^1.85.0",
+    "typescript": "^5"
   }
 }

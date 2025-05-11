@@ -1,0 +1,76 @@
+/* LIGHT THEME */
+:root {
+    /* BASE */
+    --background: #fff;
+    --primary: #141624;
+    --primary-hover: #696A75;
+    --secondary: #696A75;
+    --error: red;
+    --icon: #52525B;
+    --text: #696A75;
+    /* END BASE */
+    /* BTN */
+    --btn: #4B6BFB;
+    --btn-text: #fff;
+    --btn-hover: #516de7;
+    --btn-disabled: #4B6BFB;
+    --btn-border: #4B6BFB;
+    /*---------*/
+    --btn-outline: transparent;
+    --btn-outline-text: #696A75;
+    --btn-outline-text-hover: #141624;
+    --btn-outline-hover: transparent;
+    --btn-outline-disabled: transparent;
+    --btn-outline-border: #696A75;
+    --btn-outline-border-hover: #141624;
+    /* END BTN */
+    /* INPUT */
+    --input: #F4F4F5;
+    --input-border: #F4F4F5;
+    --input-label: #A1A1AA;
+    --input-placeholder: #A1A1AA;
+    --input-text: #949499;
+    --input-switch: #ccc;
+    --input-switch-checked: #4B6BFB;
+    --input-switch-before: #fff;
+    /* END INPUT */
+
+    /* NEXT VARS */
+    /*
+        font: --font-Manrope
+        font: --font-work-sans
+    */
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+    /* BASE */
+    --primary: #fff;
+    --primary-hover: #BABABF;
+    --error: red;
+    --icon: #52525B;
+    --text: #97989F;
+    --background: #181A2A;
+    /* END BASE */
+    /* BTN */
+    --btn: #4B6BFB;
+    --btn-text: #fff;
+    --btn-hover: #516de7;
+    --btn-disabled: #4B6BFB;
+    --btn-border: #4B6BFB;
+    /*---------*/
+    --btn-outline: #4B6BFB;
+    --btn-outline-text: #fff;
+    --btn-outline-hover: #516de7;
+    --btn-outline-disabled: #4B6BFB;
+    --btn-outline-border: #4B6BFB;
+    /* END BTN */
+    /* INPUT */
+    --input: #242535;
+    --input-border: #242535;
+    --input-label: #A1A1AA;
+    --input-placeholder: #A1A1AA;
+    --input-text: #b5b5bb;
+    /* END INPUT */
+
+  }
