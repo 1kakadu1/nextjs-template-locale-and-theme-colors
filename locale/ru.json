@@ -3,12 +3,31 @@
 		"menu": {
 			"home": "Главная",
 			"blog": "Блог",
-			"contacts": "Контакты"
+			"about": "О нас",
+			"contacts": "Контакты",
+			"terms_use":"Terms of Use",
+			"privacy_policy":"Privacy Policy",
+			"cookie_policy":"Cookie Policy"
+		},
+		"title":{
+			"about": "О нас",
+			"menu": "Меню",
+			"categories": "Категории",
+			"subscribe": "Рассылка"
+		},
+		"btn":{
+			"subscribe": "Подписаться"
+		},
+		"text":{
+			"subscribe_desc": "Получайте предложения на электронноую почту",
+			"rights_reserved":"Все права защищены"
 		}
 	},
 	"forms":{
 		"fields":{
-			"search": "Поиск"
+			"search": "Поиск",
+			"email": "Email",
+			"phone": "Телефон"
 		}
 	}
 }

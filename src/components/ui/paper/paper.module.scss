@@ -1,0 +1,21 @@
+.paper{
+    border-radius: 12px;
+    background-color: var(--paper);
+    transition: background-color 300ms ease;
+    &.secondary{
+      background-color: var(--paper-secondary);
+    }
+}
+
+
+.pd8{
+    padding: 8px;
+}
+
+.pd16{
+    padding: 16px;
+}
+
+.pd32{
+    padding: 32px;
+}

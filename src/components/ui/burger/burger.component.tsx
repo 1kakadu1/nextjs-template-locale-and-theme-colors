@@ -1,3 +1,4 @@
+'use client'
 import cl from './burger.module.scss';
 
 export const ButtonBurger = ({

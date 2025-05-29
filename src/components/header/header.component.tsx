@@ -1,10 +1,11 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { RoutesPath } from '@/@types';
-import { ButtonLink, InputField, LogoMain, SearchIcon } from '@/components/ui';
+import { ButtonBurger, ButtonLink, InputField, LogoMain, SearchIcon } from '@/components/ui';
 import { SwitchLocale } from '../switch-locale';
 import { ThemeToggle } from '../theme-toggle/theme-toggle';
 import cl from './header.module.scss';
+import { ModalMenu } from '../modal-menu';
 
 export const Header = ({
 	menu,
@@ -33,8 +34,9 @@ export const Header = ({
 						endAdornment={<SearchIcon />}
 						hideErrorText
 					/>
-					<SwitchLocale />
-					<ThemeToggle />
+					<ModalMenu />
+					{/* <SwitchLocale />
+					<ThemeToggle /> */}
 				</div>
 			</div>
 		</header>

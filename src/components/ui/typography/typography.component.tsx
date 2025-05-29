@@ -1,25 +1,37 @@
-import { HTMLAttributes, ReactElement } from 'react';
-import { TypographyBaseProps, TypographyElement } from './typography.model';
+import { AnchorHTMLAttributes, HTMLAttributes, ReactElement } from 'react';
+import { TypographyBaseProps, TypographyElement, TypographyElementWeight } from './typography.model';
 import cl from './typography.module.scss';
 
 const baseStyle = (
 	style: TypographyElement,
 	className = '',
 	element?: TypographyElement,
+	weight?: TypographyElementWeight
 ) => {
-	return `${className}  ${element ? cl[element] : cl[style]} `;
+	return `${className}  ${element ? cl[element] : cl[style]} ${weight ? cl['w'+weight] : ""}`;
 };
 
 const P = ({
 	className,
 	elementClass,
-	color = 'dark',
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLParagraphElement>) => {
 	return (
-		<p {...props} className={baseStyle('p', className, elementClass)}>
+		<p {...props} className={baseStyle('p', className, elementClass, props.weight)}>
 			{props.children}
 		</p>
+	);
+};
+
+const Link = ({
+	className,
+	elementClass,
+	...props
+}: TypographyBaseProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
+	return (
+		<a {...props} className={baseStyle('a', className, elementClass, props.weight)}>
+			{props.children}
+		</a>
 	);
 };
 
@@ -29,7 +41,7 @@ const Span = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLSpanElement>) => {
 	return (
-		<span {...props} className={baseStyle('span', className, elementClass)}>
+		<span {...props} className={baseStyle('span', className, elementClass, props.weight)}>
 			{props.children}
 		</span>
 	);
@@ -41,7 +53,7 @@ const H1 = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLHeadingElement>) => {
 	return (
-		<h1 {...props} className={baseStyle('h1', className, elementClass)}>
+		<h1 {...props} className={baseStyle('h1', className, elementClass, props.weight)}>
 			{props.children}
 		</h1>
 	);
@@ -54,7 +66,7 @@ const H2 = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLHeadingElement>) => {
 	return (
-		<h2 {...props} className={baseStyle('h2', className, elementClass)}>
+		<h2 {...props} className={baseStyle('h2', className, elementClass, props.weight)}>
 			{props.children}
 		</h2>
 	);
@@ -66,7 +78,7 @@ const H3 = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLHeadingElement>) => {
 	return (
-		<h3 {...props} className={baseStyle('h3', className, elementClass)}>
+		<h3 {...props} className={baseStyle('h3', className, elementClass, props.weight)}>
 			{props.children}
 		</h3>
 	);
@@ -78,7 +90,7 @@ const H4 = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLHeadingElement>) => {
 	return (
-		<h4 {...props} className={baseStyle('h4', className, elementClass)}>
+		<h4 {...props} className={baseStyle('h4', className, elementClass, props.weight)}>
 			{props.children}
 		</h4>
 	);
@@ -94,7 +106,7 @@ const HtmlRender = ({
 	return (
 		<div
 			{...props}
-			className={baseStyle('p', className, elementClass)}
+			className={baseStyle('p', className, elementClass, props.weight)}
 			dangerouslySetInnerHTML={{ __html: props.children }}
 		></div>
 	);
@@ -108,6 +120,7 @@ const TypographyBase = {
 	H4,
 	HtmlRender,
 	Span,
+	Link
 };
 
 // const Title = <T,>(

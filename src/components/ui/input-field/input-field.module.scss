@@ -6,7 +6,6 @@
         font-weight: 400;
         font-size: toRem(16);
         line-height: 16px;
-        color: var(--input-label);
         margin-bottom: 10px;
     }
     &__wrapper-input{
@@ -35,22 +34,18 @@
         justify-content: center;
         &__end{
             right: 0px;
-            color: var(--icon)
         }
     }
 
     &__input{
         height: 44px;
         width: 100%;
-        border: toRem(1) solid var(--input-border);
         border-radius: 5px;
         font-size: toRem(16);
-        background-color: var(--input);
         padding-right: 16px;
         padding-left: 16px;
         transition: border-color 300ms ease, background-color 300ms ease, color 300ms ease;
         font-weight: 400;
-        color: var(--input-text);
         &:focus, &:focus-visible{
             outline: none;
         }
@@ -84,4 +79,41 @@
 
 .errorHide{
     padding-bottom: 0px;
+}
+
+.primary.input-form-control{
+    .input-form-control{
+        &__label{
+            color: var(--input-label);
+        }
+        &-adornment__end{
+            color: var(--icon)
+        }
+        &__input{
+            border: toRem(1) solid var(--input-border);
+            background-color: var(--input);
+            color: var(--input-text);
+            &::placeholder{
+                color: var(--input-placeholder);
+            }
+        }
+    }
+}
+.secondary.input-form-control{
+    .input-form-control{
+        &__label{
+            color: var(--input-secondary-label);
+        }
+        &-adornment__end{
+            color: var(--icon-secondary)
+        }
+        &__input{
+            border: toRem(1) solid var(--input-secondary-border);
+            background-color: var(--input-secondary);
+            color: var(--input-secondary-text);
+            &::placeholder{
+                color: var(--input-secondary-placeholder);
+            }
+        }
+    }
 }

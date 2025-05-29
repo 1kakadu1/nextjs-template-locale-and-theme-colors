@@ -12,16 +12,12 @@
     justify-content: center;
     gap: 5px;
     &.dark{
-        background-color: var(--Dark-Blue-Dark-Blue, #1E203D);
         .hamburger-line {
             background: var(---primary, #F8F8F8);
         }
     }
     &.light{
         background: var(---primary, #F8F8F8);
-        .hamburger-line {
-            background-color: var(--Dark-Blue-Dark-Blue, #1E203D);
-        }
     }
     .hamburger-line {
         display: block;

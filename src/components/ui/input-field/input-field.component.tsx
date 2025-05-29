@@ -18,6 +18,7 @@ export const InputField = forwardRef(
 			error: errorProps,
 			endAdornment,
 			hideErrorText = false,
+			variant = "primary",
 			...props
 		}: IInputDefaultProps,
 		ref: Ref<HTMLInputElement> | undefined,
@@ -26,7 +27,7 @@ export const InputField = forwardRef(
 
 		return (
 			<div
-				className={cl['input-form-control'] + ' ' + className}
+				className={cl['input-form-control']+" "+cl[variant]+' ' + className}
 				data-testid="input"
 			>
 				{label && (

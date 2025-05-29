@@ -1,5 +1,94 @@
 .footer{
-   padding: clamp(40px,toViewport(92),92px) 0px;
-   background-color: var(--Dark-Blue-Dark-Blue);
-   color: var(---primary);
+   border-top: 1px solid;
+   border-color: var(--hr);
+   background-color: var(--footer);
+   transition: background-color 400ms ease, border-color 410ms ease;
+   padding-bottom: 32px;
+   padding-top: 64px;
+   margin-top: 50px;
+}
+
+div.row{
+   gap: 30px;
+   align-items: flex-start;
+   &>div{
+      width: 33%;
+   }
+   @include min-descktop{
+      gap: 80px;
+   }
+}
+
+.link{
+   display: flex;
+}
+
+.link__label{
+   color: var(--text);
+   margin-left: 10px;
+}
+
+.desc{
+   margin-top: 12px;
+   margin-bottom: 24px;
+}
+
+.menu{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 10px;
+}
+
+.menu__site{
+   ul{
+      padding-top: 16px;
+      li{
+         margin-top: 8px;
+      }
+   }
+}
+
+.subscribe{
+
+}
+
+.form{
+   text-align: center;
+   &>p{
+      padding-bottom: 30px;
+   }
+}
+
+.form__btn{
+   width: 100%;
+}
+.row__bottom{
+   margin-top: 64px;
+   padding-top: 32px;
+   width: 100%;
+   border-top: 1px solid  var(--hr);
+}
+.row__bottom__left{
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   svg{
+      width: 44px;
+      height: 44px;
+   }
+}
+
+.footer__info{
+   font-size: toRem(20);
+   font-weight: 400;
+   line-height: 28px;
+   color: var(--dark-white);
+   span{
+      font-weight: 600;
+   } 
+}
+
+.row__bottom__right{
+   display: flex;
+   gap: 16px;
 }

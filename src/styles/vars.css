@@ -1,6 +1,7 @@
 /* LIGHT THEME */
 :root {
     /* BASE */
+    --dark-white: #141624;
     --background: #fff;
     --primary: #141624;
     --primary-hover: #696A75;
@@ -8,6 +9,12 @@
     --error: red;
     --icon: #52525B;
     --text: #696A75;
+    --hr: #E8E8EA;
+    --link: #181A2A;
+    --paper: #fff;
+    --paper-secondary: #E8E8EA;
+    --modal: #fff;
+    --overlay: #000000b3;
     /* END BASE */
     /* BTN */
     --btn: #4B6BFB;
@@ -33,7 +40,16 @@
     --input-switch: #ccc;
     --input-switch-checked: #4B6BFB;
     --input-switch-before: #fff;
+    /*---------*/
+    --input-secondary-label: #97989F;
+    --input-secondary-border: #DCDDDF;
+    --input-secondary-placeholder: #97989F;
+    --input-secondary: #FFF;
+    --input-secondary-text: #9fa0a7;
     /* END INPUT */
+    /*FOOTER*/
+    --footer: #F6F6F7;
+    /* END FOOTER */
 
     /* NEXT VARS */
     /*
@@ -45,12 +61,19 @@
 /* DARK THEME */
 [data-theme="dark"] {
     /* BASE */
+    --dark-white: #fff;
     --primary: #fff;
     --primary-hover: #BABABF;
     --error: red;
     --icon: #52525B;
     --text: #97989F;
     --background: #181A2A;
+    --hr: #242535;
+    --link: #fff;
+    --paper: #242535;
+    --paper-secondary: #242535;
+    --modal: #141624;
+    --overlay: rgb(36 37 53 / 81%);
     /* END BASE */
     /* BTN */
     --btn: #4B6BFB;
@@ -71,6 +94,15 @@
     --input-label: #A1A1AA;
     --input-placeholder: #A1A1AA;
     --input-text: #b5b5bb;
+    /*---------*/
+    --input-secondary-label: #97989F;
+    --input-secondary-border: #3B3C4A;
+    --input-secondary-placeholder: #97989F;
+    --input-secondary: #181A2A;
+    --input-secondary-text: #9fa0a7;
     /* END INPUT */
+    /*FOOTER*/
+    --footer: #141624;
+    /* END FOOTER */
 
   }

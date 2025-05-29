@@ -2,13 +2,32 @@
 	"base": {
 		"menu": {
 			"home": "Home",
+			"about": "About",
 			"blog": "Blog",
-			"contacts": "Contacts"
+			"contacts": "Contacts",
+			"terms_use":"Terms of Use",
+			"privacy_policy":"Privacy Policy",
+			"cookie_policy":"Cookie Policy"
+		},
+		"title":{
+			"about": "About",
+			"menu": "Menu",
+			"categories": "Categories",
+			"subscribe": "Weekly Newsletter"
+		},
+		"btn":{
+			"subscribe": "Subscribe"
+		},
+		"text":{
+			"subscribe_desc": "Get blog articles and offers via email",
+			"rights_reserved":"All Rights Reserved"
 		}
 	},
 	"forms":{
 		"fields":{
-			"search": "Search"
+			"search": "Search",
+			"email": "Email",
+			"phone": "Phone"
 		}
 	}
 }

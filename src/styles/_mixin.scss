@@ -4,6 +4,9 @@
 
 $maxWidthContainer: 1280;
 $maxWidth: 1920;
+$weight: (100,200,300,400,500,600,700,800,900);
+$min-tablet: 768px;
+$min-descktop: 1280px;
 
 @mixin adaptive-var($property, $startSize, $minSize, $type) {
     $addSize: $startSize - $minSize;
@@ -45,3 +48,23 @@ $maxWidth: 1920;
     @return $value;
 }
 
+
+
+@mixin min-tablet {
+  @media screen and (min-width: $min-tablet) {
+    @content;
+  }
+}
+
+@mixin min-descktop {
+  @media screen and (min-width: $min-descktop) {
+    @content;
+  }
+}
+
+
+@mixin min-width($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}

@@ -1,0 +1,12 @@
+.modal__content{
+    height: 100vh;
+    border-radius: 0px;
+    background-color: var(--modal);
+    width: 30%;
+    padding: 16px;
+    border-left: 1px solid var(--hr);
+}
+
+.modal__overlay{
+    background-color: var(--overlay);
+}
