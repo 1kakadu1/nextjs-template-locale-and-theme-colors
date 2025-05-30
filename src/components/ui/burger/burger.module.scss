@@ -13,11 +13,13 @@
 	gap: 5px;
 	&.dark {
 		.hamburger-line {
-			background: var(---primary, #f8f8f8);
+			background-color: var(---primary, #f8f8f8);
 		}
 	}
 	&.light {
-		background: var(---primary, #f8f8f8);
+		.hamburger-line {
+			background-color: var(---primary, #f8f8f8);
+		}
 	}
 	.hamburger-line {
 		display: block;

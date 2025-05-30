@@ -23,8 +23,10 @@ export const ModalMenu = ({ className = '' }: IModalMenuProps) => {
 				classes={{ content: cl.modal__content, overlay: cl.modal__overlay }}
 			>
 				<div>
-					<SwitchLocale />
-					<ThemeToggle />
+					<div className={cl.top__actions}>
+						<SwitchLocale />
+						<ThemeToggle />
+					</div>
 				</div>
 			</Modal>
 		</div>

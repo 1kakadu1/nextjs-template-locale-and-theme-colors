@@ -51,6 +51,11 @@
 	--footer: #f6f6f7;
 	/* END FOOTER */
 
+	/* MENU */
+	--hamburger-line-dark: ;
+	--hamburger-line-light: ;
+	/* END MENU */
+
 	/* NEXT VARS */
 	/*
         font: --font-Manrope
