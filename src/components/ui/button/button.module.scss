@@ -1,74 +1,106 @@
-.link{
-    color: var(--primary);
-    font-size: toRem(16);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    transition: opacity 300ms ease, color 300ms ease, color ease 300ms;
-    opacity: 1;
-    text-decoration: none;
-    &:disabled { 
-        transition: opacity 300ms ease, color 300ms ease, color ease 300ms;
-        opacity: 0.8;
-    }
-    @media (hover:hover) {
-        &:hover:not([disabled]){
-            color: var(--primary-hover); 
-            transition: opacity 300ms ease, color 300ms ease, color ease 300ms;
-        }
-    }
+.link {
+	color: var(--primary);
+	font-size: toRem(16);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	transition:
+		opacity 300ms ease,
+		color 300ms ease,
+		color ease 300ms;
+	opacity: 1;
+	text-decoration: none;
+	&:disabled {
+		transition:
+			opacity 300ms ease,
+			color 300ms ease,
+			color ease 300ms;
+		opacity: 0.8;
+	}
+	@media (hover: hover) {
+		&:hover:not([disabled]) {
+			color: var(--primary-hover);
+			transition:
+				opacity 300ms ease,
+				color 300ms ease,
+				color ease 300ms;
+		}
+	}
 }
 
-.btn{
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 300ms ease, opacity 300ms ease, color 300ms ease, color ease 300ms, border 300ms ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: toRem(16);
-    min-height: 48px;
-    opacity: 1;
+.btn {
+	padding: 12px 20px;
+	cursor: pointer;
+	border-radius: 6px;
+	transition:
+		background-color 300ms ease,
+		opacity 300ms ease,
+		color 300ms ease,
+		color ease 300ms,
+		border 300ms ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	font-size: toRem(16);
+	min-height: 48px;
+	opacity: 1;
 }
 
-.fluid{
-    border: none;
-    color: var(--btn-text);
-    background-color: var(--btn);
-    &:disabled { 
-        background-color: var(--btn-disabled);
-        transition: background-color 300ms ease, opacity 300ms ease, color 300ms ease, color ease 300ms, border 300ms ease;
-        opacity: 0.7;
-    }
+.fluid {
+	border: none;
+	color: var(--btn-text);
+	background-color: var(--btn);
+	&:disabled {
+		background-color: var(--btn-disabled);
+		transition:
+			background-color 300ms ease,
+			opacity 300ms ease,
+			color 300ms ease,
+			color ease 300ms,
+			border 300ms ease;
+		opacity: 0.7;
+	}
 
-    @media (hover:hover) {
-        &:hover:not([disabled]){
-            transition: background-color 300ms ease, opacity 300ms ease, color 300ms ease, color ease 300ms, border 300ms ease; 
-            background-color: var(--btn-hover);
-        }
-    }
+	@media (hover: hover) {
+		&:hover:not([disabled]) {
+			transition:
+				background-color 300ms ease,
+				opacity 300ms ease,
+				color 300ms ease,
+				color ease 300ms,
+				border 300ms ease;
+			background-color: var(--btn-hover);
+		}
+	}
 }
 
-.outline{
-    border: 1px solid var(--btn-outline-border);
-    color: var(--btn-outline-text);
-    background-color: var(--btn-outline);
-    &:disabled { 
-        background-color: var(--btn-outline-disabled);
-        transition: background-color 300ms ease, opacity 300ms ease, color 300ms ease, color ease 300ms, border 300ms ease;
-        opacity: 0.7;
-    }
+.outline {
+	border: 1px solid var(--btn-outline-border);
+	color: var(--btn-outline-text);
+	background-color: var(--btn-outline);
+	&:disabled {
+		background-color: var(--btn-outline-disabled);
+		transition:
+			background-color 300ms ease,
+			opacity 300ms ease,
+			color 300ms ease,
+			color ease 300ms,
+			border 300ms ease;
+		opacity: 0.7;
+	}
 
-    @media (hover:hover) {
-        &:hover:not([disabled]){
-            border-color: var(--btn-outline-border-hover);
-            color: var(--btn-outline-text-hover);
-            transition: background-color 300ms ease, opacity 300ms ease, color 300ms ease, color ease 300ms, border 300ms ease; 
-            background-color: var(--btn-outline-hover);
-        }
-    }
+	@media (hover: hover) {
+		&:hover:not([disabled]) {
+			border-color: var(--btn-outline-border-hover);
+			color: var(--btn-outline-text-hover);
+			transition:
+				background-color 300ms ease,
+				opacity 300ms ease,
+				color 300ms ease,
+				color ease 300ms,
+				border 300ms ease;
+			background-color: var(--btn-outline-hover);
+		}
+	}
 }
-
-

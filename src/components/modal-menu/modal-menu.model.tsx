@@ -1,3 +1,3 @@
-export interface IModalMenuProps{
-    className?: string;
+export interface IModalMenuProps {
+	className?: string;
 }

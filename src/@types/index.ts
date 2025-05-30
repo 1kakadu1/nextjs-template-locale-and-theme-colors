@@ -1,15 +1,5 @@
 export * from './route';
 
-export interface ISwiper extends Object {
-	activeIndex: number;
-	previousIndex: number;
-	slideTo?: (index: number) => void;
-	update: () => void;
-	destroy: () => void;
-	init: (el: any) => void;
-	updateSize: () => void;
-}
-
 export type BreakpointsSwiper = {
 	[key: number]: {
 		slidesPerView: number;

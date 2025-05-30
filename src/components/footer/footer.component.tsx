@@ -1,10 +1,17 @@
+import {
+	Button,
+	ButtonLink,
+	InputField,
+	LogoMain,
+	Paper,
+	Typography,
+} from '@/components/ui';
 import { useGetTranslations } from '@/hooks/useGetTranslations';
-import { ButtonLink, Typography, Paper, Button, InputField, LogoMain } from '@/components/ui';
 import cl from './footer.module.scss';
 
 export const Footer = ({
 	menu,
-	categories
+	categories,
 }: {
 	menu: { label: string; href: string }[];
 	categories: { label: string; href: string }[];
@@ -53,7 +60,7 @@ export const Footer = ({
 								))}
 							</ul>
 						</div>
-												<div className={cl.menu__site}>
+						<div className={cl.menu__site}>
 							<Typography.H4>{t('base.title.categories')}</Typography.H4>
 							<ul>
 								{categories.map((item, index) => (
@@ -69,9 +76,9 @@ export const Footer = ({
 							<form className={cl.form}>
 								<Typography.H4>{t('base.title.subscribe')}</Typography.H4>
 								<Typography.P>{t('base.text.subscribe_desc')}</Typography.P>
-								<InputField placeholder='Your Email' variant='secondary' />
+								<InputField placeholder="Your Email" variant="secondary" />
 								<Button className={cl.form__btn}>
-									{t("base.btn.subscribe")}
+									{t('base.btn.subscribe')}
 								</Button>
 							</form>
 						</Paper>
@@ -85,13 +92,15 @@ export const Footer = ({
 								Name
 								<span>Site</span>
 							</p>
-							<Typography.P>© Site 2025. {t("base.text.rights_reserved")}.</Typography.P>
+							<Typography.P>
+								© Site 2025. {t('base.text.rights_reserved')}.
+							</Typography.P>
 						</div>
 					</div>
 					<div className={cl.row__bottom__right}>
-							<ButtonLink href={"#"}>{t("base.menu.terms_use")}</ButtonLink>
-							<ButtonLink href={"#"}>{t("base.menu.privacy_policy")}</ButtonLink>
-							<ButtonLink href={"#"}>{t("base.menu.cookie_policy")}</ButtonLink>	
+						<ButtonLink href={'#'}>{t('base.menu.terms_use')}</ButtonLink>
+						<ButtonLink href={'#'}>{t('base.menu.privacy_policy')}</ButtonLink>
+						<ButtonLink href={'#'}>{t('base.menu.cookie_policy')}</ButtonLink>
 					</div>
 				</div>
 			</div>

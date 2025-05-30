@@ -1,62 +1,62 @@
-
-.h1{
-    @include fontSize(32,64);
-    font-weight: 700;
-    line-height: 100%;
-    color: var(--primary);
+.h1 {
+	@include fontSize(32, 64);
+	font-weight: 700;
+	line-height: 100%;
+	color: var(--primary);
 }
 
-.h2{
-    @include fontSize(40,64);
-    font-weight: 700;
-    line-height: 100%;
-    color: var(--primary);
+.h2 {
+	@include fontSize(40, 64);
+	font-weight: 700;
+	line-height: 100%;
+	color: var(--primary);
 }
 
-.h3{
-    @include fontSize(20,24);
-    font-weight: 600;
-    line-height: 110%;
-    color: var(--primary);
+.h3 {
+	@include fontSize(20, 24);
+	font-weight: 600;
+	line-height: 110%;
+	color: var(--primary);
 }
 
-.h4{
-    @include fontSize(16,18);
-    font-weight: 600;
-    line-height: 28px;
-    color: var(--primary);
+.h4 {
+	@include fontSize(16, 18);
+	font-weight: 600;
+	line-height: 28px;
+	color: var(--primary);
 }
 
-.p, .a{
-    @include fontSize(14,16);
-    font-weight: 400;
-    line-height: 24px;
-    color: var(--text);
+.p,
+.a {
+	@include fontSize(14, 16);
+	font-weight: 400;
+	line-height: 24px;
+	color: var(--text);
 }
 
-.a{
-    color: var(--link);
-    text-decoration: none;
+.a {
+	color: var(--link);
+	text-decoration: none;
 }
 
 @each $value in $weight {
-    .w#{$value} {
-        font-weight: #{$value};
-    }
+	.w#{$value} {
+		font-weight: #{$value};
+	}
 }
 
-.white{
-    color: var(--primary);
+.white {
+	color: var(--primary);
 }
 
-.dark{
-    color: var(--Text-Dark-Primary);
+.dark {
+	color: var(--Text-Dark-Primary);
 }
 
-.dark-light{
-    color: var(--Text-Dark-Secondary);
+.dark-light {
+	color: var(--Text-Dark-Secondary);
 }
 
-.gray{
-    color: var(--Text-White-Secondary);
+.gray {
+	color: var(--Text-White-Secondary);
 }

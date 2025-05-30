@@ -5,26 +5,26 @@
 			"blog": "Блог",
 			"about": "О нас",
 			"contacts": "Контакты",
-			"terms_use":"Terms of Use",
-			"privacy_policy":"Privacy Policy",
-			"cookie_policy":"Cookie Policy"
+			"terms_use": "Terms of Use",
+			"privacy_policy": "Privacy Policy",
+			"cookie_policy": "Cookie Policy"
 		},
-		"title":{
+		"title": {
 			"about": "О нас",
 			"menu": "Меню",
 			"categories": "Категории",
 			"subscribe": "Рассылка"
 		},
-		"btn":{
+		"btn": {
 			"subscribe": "Подписаться"
 		},
-		"text":{
+		"text": {
 			"subscribe_desc": "Получайте предложения на электронноую почту",
-			"rights_reserved":"Все права защищены"
+			"rights_reserved": "Все права защищены"
 		}
 	},
-	"forms":{
-		"fields":{
+	"forms": {
+		"fields": {
 			"search": "Поиск",
 			"email": "Email",
 			"phone": "Телефон"

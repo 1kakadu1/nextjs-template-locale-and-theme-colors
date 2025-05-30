@@ -1,14 +1,18 @@
 import { AnchorHTMLAttributes, HTMLAttributes, ReactElement } from 'react';
-import { TypographyBaseProps, TypographyElement, TypographyElementWeight } from './typography.model';
+import {
+	TypographyBaseProps,
+	TypographyElement,
+	TypographyElementWeight,
+} from './typography.model';
 import cl from './typography.module.scss';
 
 const baseStyle = (
 	style: TypographyElement,
 	className = '',
 	element?: TypographyElement,
-	weight?: TypographyElementWeight
+	weight?: TypographyElementWeight,
 ) => {
-	return `${className}  ${element ? cl[element] : cl[style]} ${weight ? cl['w'+weight] : ""}`;
+	return `${className}  ${element ? cl[element] : cl[style]} ${weight ? cl['w' + weight] : ''}`;
 };
 
 const P = ({
@@ -17,7 +21,10 @@ const P = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLParagraphElement>) => {
 	return (
-		<p {...props} className={baseStyle('p', className, elementClass, props.weight)}>
+		<p
+			{...props}
+			className={baseStyle('p', className, elementClass, props.weight)}
+		>
 			{props.children}
 		</p>
 	);
@@ -29,7 +36,10 @@ const Link = ({
 	...props
 }: TypographyBaseProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
 	return (
-		<a {...props} className={baseStyle('a', className, elementClass, props.weight)}>
+		<a
+			{...props}
+			className={baseStyle('a', className, elementClass, props.weight)}
+		>
 			{props.children}
 		</a>
 	);
@@ -41,7 +51,10 @@ const Span = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLSpanElement>) => {
 	return (
-		<span {...props} className={baseStyle('span', className, elementClass, props.weight)}>
+		<span
+			{...props}
+			className={baseStyle('span', className, elementClass, props.weight)}
+		>
 			{props.children}
 		</span>
 	);
@@ -53,7 +66,10 @@ const H1 = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLHeadingElement>) => {
 	return (
-		<h1 {...props} className={baseStyle('h1', className, elementClass, props.weight)}>
+		<h1
+			{...props}
+			className={baseStyle('h1', className, elementClass, props.weight)}
+		>
 			{props.children}
 		</h1>
 	);
@@ -66,7 +82,10 @@ const H2 = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLHeadingElement>) => {
 	return (
-		<h2 {...props} className={baseStyle('h2', className, elementClass, props.weight)}>
+		<h2
+			{...props}
+			className={baseStyle('h2', className, elementClass, props.weight)}
+		>
 			{props.children}
 		</h2>
 	);
@@ -78,7 +97,10 @@ const H3 = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLHeadingElement>) => {
 	return (
-		<h3 {...props} className={baseStyle('h3', className, elementClass, props.weight)}>
+		<h3
+			{...props}
+			className={baseStyle('h3', className, elementClass, props.weight)}
+		>
 			{props.children}
 		</h3>
 	);
@@ -90,7 +112,10 @@ const H4 = ({
 	...props
 }: TypographyBaseProps & HTMLAttributes<HTMLHeadingElement>) => {
 	return (
-		<h4 {...props} className={baseStyle('h4', className, elementClass, props.weight)}>
+		<h4
+			{...props}
+			className={baseStyle('h4', className, elementClass, props.weight)}
+		>
 			{props.children}
 		</h4>
 	);
@@ -120,7 +145,7 @@ const TypographyBase = {
 	H4,
 	HtmlRender,
 	Span,
-	Link
+	Link,
 };
 
 // const Title = <T,>(

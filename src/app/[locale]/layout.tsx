@@ -31,18 +31,22 @@ export default async function RootLayout({
 	}
 
 	const MENU = [
-					{ label: t('menu.blog'), href: RoutesPath.home },
-					{ label: t('menu.about'), href: RoutesPath.home },
-					{ label: t('menu.contacts'), href: RoutesPath.home },
-				]
-	const CATEGORIES = [{ label: "Category 1", href: RoutesPath.home },{ label: "Category 1", href: RoutesPath.home },{ label: "Category 2", href: RoutesPath.home },{ label: "Category 3", href: RoutesPath.home },{ label: "Category 4", href: RoutesPath.home }]
+		{ label: t('menu.blog'), href: RoutesPath.home },
+		{ label: t('menu.about'), href: RoutesPath.home },
+		{ label: t('menu.contacts'), href: RoutesPath.home },
+	];
+	const CATEGORIES = [
+		{ label: 'Category 1', href: RoutesPath.home },
+		{ label: 'Category 1', href: RoutesPath.home },
+		{ label: 'Category 2', href: RoutesPath.home },
+		{ label: 'Category 3', href: RoutesPath.home },
+		{ label: 'Category 4', href: RoutesPath.home },
+	];
 	return (
 		<html lang={locale} data-theme={theme}>
 			<body className={`${fontManrope.variable} ${workSansFont.variable}`}>
 				<NextIntlClientProvider>
-					<Header
-						menu={MENU}
-					/>
+					<Header menu={MENU} />
 					{children}
 					<Footer menu={MENU} categories={CATEGORIES} />
 				</NextIntlClientProvider>

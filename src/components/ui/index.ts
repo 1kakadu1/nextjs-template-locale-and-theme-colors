@@ -5,4 +5,4 @@ export * from './modal/modal.component';
 export * from './portal-wrapper/portal-wrapper.container';
 export * from './input-field';
 export * from './burger/burger.component';
-export * from './paper'; 
+export * from './paper';

@@ -7,10 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "prettier --write . && next lint . --fix",
     "format:check": "npx prettier --list-different --ignore-path=.gitignore \"**/*.ts(x)?\"",
     "format:fix": "npx prettier --list-different --ignore-path=.gitignore \"**/*.ts(x)?\" --write",
     "pre-commit": "npm run format:fix && npm run format:check && npm run build",
-    "nc": "hygen new component"
+    "nc": "hygen new component",
+    "prepare": "cd .. && husky project/.husky"
   },
   "dependencies": {
     "next": "15.1.7",
@@ -26,7 +28,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
     "hygen": "^6.2.11",
+    "lint-staged": "^16.1.0",
     "prettier": "^3.5.2",
     "sass": "^1.85.0",
     "typescript": "^5"

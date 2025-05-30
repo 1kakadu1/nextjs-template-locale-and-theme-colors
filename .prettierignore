@@ -1,16 +1,26 @@
- node_modules
- .next
- .husky
- coverage
- .prettierignore
- .stylelintignore
- .eslintignore
- stories
- storybook-static
- *.log
- playwright-report
- .nyc_output
- test-results
- junit.xml
- docs
- .hygen
+node_modules
+.next
+.husky
+coverage
+.prettierignore
+.stylelintignore
+.eslintignore
+stories
+storybook-static
+*.log
+playwright-report
+.nyc_output
+test-results
+junit.xml
+docs
+.hygen
+.prettierrc
+.lintstagedrc.js
+next.config.mjs
+.next
+public
+postcss.config.json
+eslint.config.mjs
+package-lock.json
+package.json
+tsconfig.json

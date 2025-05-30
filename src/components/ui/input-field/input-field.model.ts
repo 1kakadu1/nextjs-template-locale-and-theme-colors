@@ -11,7 +11,7 @@ export interface IInputDefaultProps
 	error?: string;
 	endAdornment?: JSX.Element;
 	hideErrorText?: boolean;
-	variant?: "secondary" | "primary"
+	variant?: 'secondary' | 'primary';
 }
 
 export interface ITextAreaProps
@@ -24,5 +24,5 @@ export interface ITextAreaProps
 	error?: string | null;
 	endAdornment?: JSX.Element;
 	hideErrorText?: boolean;
-	variant?: "secondary" | "primary"
+	variant?: 'secondary' | 'primary';
 }

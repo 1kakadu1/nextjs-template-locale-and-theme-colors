@@ -14,7 +14,7 @@ export const TextAreaField = forwardRef(
 			className = '',
 			error: errorProps,
 			endAdornment,
-			variant = "primary",
+			variant = 'primary',
 			...props
 		}: ITextAreaProps,
 		ref: Ref<HTMLTextAreaElement> | undefined,
@@ -22,7 +22,7 @@ export const TextAreaField = forwardRef(
 		const id_field = id ? id : useId();
 
 		return (
-			<div className={'input-form-control '+className} data-testid="input">
+			<div className={'input-form-control ' + className} data-testid="input">
 				{label && (
 					<label className="input-form-control__label" htmlFor={id}>
 						{label}

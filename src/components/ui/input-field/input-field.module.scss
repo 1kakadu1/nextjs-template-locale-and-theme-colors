@@ -1,119 +1,123 @@
-@use "@/styles/_mixin.scss" as *;
+@use '@/styles/_mixin.scss' as *;
 
-.input-form-control{
-    position: relative;
-    &__label{
-        font-weight: 400;
-        font-size: toRem(16);
-        line-height: 16px;
-        margin-bottom: 10px;
-    }
-    &__wrapper-input{
-        width: 100%;
-        position: relative;
-        padding-bottom: 20px;
-        
-        &.error{
-            & .input-form-control__input {
-                border-color: var(--error);
-                transition: border-color 300ms ease;
-            }
-            & .input-form-control__btn:hover{
-                border-color: var(--error);
-            }
-        }
-    }
-    &-adornment{
-        position: absolute;
-        z-index: 6;
-        top: 0;
-        min-width: 49px;
-        min-height: 49px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &__end{
-            right: 0px;
-        }
-    }
+.input-form-control {
+	position: relative;
+	&__label {
+		font-weight: 400;
+		font-size: toRem(16);
+		line-height: 16px;
+		margin-bottom: 10px;
+	}
+	&__wrapper-input {
+		width: 100%;
+		position: relative;
+		padding-bottom: 20px;
 
-    &__input{
-        height: 44px;
-        width: 100%;
-        border-radius: 5px;
-        font-size: toRem(16);
-        padding-right: 16px;
-        padding-left: 16px;
-        transition: border-color 300ms ease, background-color 300ms ease, color 300ms ease;
-        font-weight: 400;
-        &:focus, &:focus-visible{
-            outline: none;
-        }
-    }
-    &__textarea{
-        height: auto;
-        resize: none;
-        padding: toRem(16);
-        max-height: 100px;
-    }
-    &__error{
-        font-size: toRem(12);
-        color: var(--error);
-        position: absolute;
-        width: 100%;
-        bottom: 3px;
-        left: 0;
-        opacity: 1;
-        z-index: -1;
-        visibility: hidden;
-        transition: all 300ms ease;
-        text-align: left;
-        &.error{
-            opacity: 1;
-            visibility: visible;
-            z-index: 1;
-            transition: all 300ms ease;
-        }
-    }
+		&.error {
+			& .input-form-control__input {
+				border-color: var(--error);
+				transition: border-color 300ms ease;
+			}
+			& .input-form-control__btn:hover {
+				border-color: var(--error);
+			}
+		}
+	}
+	&-adornment {
+		position: absolute;
+		z-index: 6;
+		top: 0;
+		min-width: 49px;
+		min-height: 49px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&__end {
+			right: 0px;
+		}
+	}
+
+	&__input {
+		height: 44px;
+		width: 100%;
+		border-radius: 5px;
+		font-size: toRem(16);
+		padding-right: 16px;
+		padding-left: 16px;
+		transition:
+			border-color 300ms ease,
+			background-color 300ms ease,
+			color 300ms ease;
+		font-weight: 400;
+		&:focus,
+		&:focus-visible {
+			outline: none;
+		}
+	}
+	&__textarea {
+		height: auto;
+		resize: none;
+		padding: toRem(16);
+		max-height: 100px;
+	}
+	&__error {
+		font-size: toRem(12);
+		color: var(--error);
+		position: absolute;
+		width: 100%;
+		bottom: 3px;
+		left: 0;
+		opacity: 1;
+		z-index: -1;
+		visibility: hidden;
+		transition: all 300ms ease;
+		text-align: left;
+		&.error {
+			opacity: 1;
+			visibility: visible;
+			z-index: 1;
+			transition: all 300ms ease;
+		}
+	}
 }
 
-.errorHide{
-    padding-bottom: 0px;
+.errorHide {
+	padding-bottom: 0px;
 }
 
-.primary.input-form-control{
-    .input-form-control{
-        &__label{
-            color: var(--input-label);
-        }
-        &-adornment__end{
-            color: var(--icon)
-        }
-        &__input{
-            border: toRem(1) solid var(--input-border);
-            background-color: var(--input);
-            color: var(--input-text);
-            &::placeholder{
-                color: var(--input-placeholder);
-            }
-        }
-    }
+.primary.input-form-control {
+	.input-form-control {
+		&__label {
+			color: var(--input-label);
+		}
+		&-adornment__end {
+			color: var(--icon);
+		}
+		&__input {
+			border: toRem(1) solid var(--input-border);
+			background-color: var(--input);
+			color: var(--input-text);
+			&::placeholder {
+				color: var(--input-placeholder);
+			}
+		}
+	}
 }
-.secondary.input-form-control{
-    .input-form-control{
-        &__label{
-            color: var(--input-secondary-label);
-        }
-        &-adornment__end{
-            color: var(--icon-secondary)
-        }
-        &__input{
-            border: toRem(1) solid var(--input-secondary-border);
-            background-color: var(--input-secondary);
-            color: var(--input-secondary-text);
-            &::placeholder{
-                color: var(--input-secondary-placeholder);
-            }
-        }
-    }
+.secondary.input-form-control {
+	.input-form-control {
+		&__label {
+			color: var(--input-secondary-label);
+		}
+		&-adornment__end {
+			color: var(--icon-secondary);
+		}
+		&__input {
+			border: toRem(1) solid var(--input-secondary-border);
+			background-color: var(--input-secondary);
+			color: var(--input-secondary-text);
+			&::placeholder {
+				color: var(--input-secondary-placeholder);
+			}
+		}
+	}
 }

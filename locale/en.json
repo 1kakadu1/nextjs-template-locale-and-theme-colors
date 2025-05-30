@@ -5,26 +5,26 @@
 			"about": "About",
 			"blog": "Blog",
 			"contacts": "Contacts",
-			"terms_use":"Terms of Use",
-			"privacy_policy":"Privacy Policy",
-			"cookie_policy":"Cookie Policy"
+			"terms_use": "Terms of Use",
+			"privacy_policy": "Privacy Policy",
+			"cookie_policy": "Cookie Policy"
 		},
-		"title":{
+		"title": {
 			"about": "About",
 			"menu": "Menu",
 			"categories": "Categories",
 			"subscribe": "Weekly Newsletter"
 		},
-		"btn":{
+		"btn": {
 			"subscribe": "Subscribe"
 		},
-		"text":{
+		"text": {
 			"subscribe_desc": "Get blog articles and offers via email",
-			"rights_reserved":"All Rights Reserved"
+			"rights_reserved": "All Rights Reserved"
 		}
 	},
-	"forms":{
-		"fields":{
+	"forms": {
+		"fields": {
 			"search": "Search",
 			"email": "Email",
 			"phone": "Phone"

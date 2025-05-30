@@ -4,67 +4,75 @@
 
 $maxWidthContainer: 1280;
 $maxWidth: 1920;
-$weight: (100,200,300,400,500,600,700,800,900);
+$weight: (100, 200, 300, 400, 500, 600, 700, 800, 900);
 $min-tablet: 768px;
 $min-descktop: 1280px;
 
 @mixin adaptive-var($property, $startSize, $minSize, $type) {
-    $addSize: $startSize - $minSize;
-    @if $type == 1{
-        #{$property}: $startSize + px;
-        @media (max-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px)/#{$maxWidthContainer - 320}));
-        }
-    } @else if $type == 2{
-        #{$property}: $startSize + px;
-        @media (min-width: #{$maxWidthContainer + px}) {
-            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px)/#{$maxWidth - 320}));
-        }
-    } @else{
-        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px)/#{$maxWidth - 320}));
-    }
+	$addSize: $startSize - $minSize;
+	@if $type == 1 {
+		#{$property}: $startSize + px;
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(
+				#{$minSize + px} + #{$addSize} *
+					((100vw - 320px) /#{$maxWidthContainer - 320})
+			);
+		}
+	} @else if $type == 2 {
+		#{$property}: $startSize + px;
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(
+				#{$minSize + px} + #{$addSize} * ((100vw - 320px) /#{$maxWidth - 320})
+			);
+		}
+	} @else {
+		#{$property}: calc(
+			#{$minSize + px} + #{$addSize} * ((100vw - 320px) /#{$maxWidth - 320})
+		);
+	}
 }
 
 @mixin toRemProp($property, $value) {
-    #{$property}: ($value / 16) + rem;
+	#{$property}: ($value / 16) + rem;
 }
 
 @mixin toViewportProp($property, $value, $type: vw) {
-    #{$property}: (($value / $maxWidth)*100) + $type;
+	#{$property}: (($value / $maxWidth) * 100) + $type;
 }
 
 @mixin fontSize($valueMin, $valueMax) {
-    font-size: clamp(#{toRem($valueMin)},#{toViewport($valueMax)},#{toRem($valueMax)});
+	font-size: clamp(
+		#{toRem($valueMin)},
+		#{toViewport($valueMax)},
+		#{toRem($valueMax)}
+	);
 }
 
 @function toRem($value) {
-    $remValue: calc($value / 16) ; 
-    @return $remValue+rem;
+	$remValue: calc($value / 16);
+	@return $remValue + rem;
 }
 
 @function toViewport($value, $type: vw) {
-    $div:  calc($value / $maxWidth); //(($value / $maxWidth)*100) + $type;
-    $value: calc($div * 100) + $type ;
-    @return $value;
+	$div: calc($value / $maxWidth); //(($value / $maxWidth)*100) + $type;
+	$value: calc($div * 100) + $type;
+	@return $value;
 }
 
-
-
 @mixin min-tablet {
-  @media screen and (min-width: $min-tablet) {
-    @content;
-  }
+	@media screen and (min-width: $min-tablet) {
+		@content;
+	}
 }
 
 @mixin min-descktop {
-  @media screen and (min-width: $min-descktop) {
-    @content;
-  }
+	@media screen and (min-width: $min-descktop) {
+		@content;
+	}
 }
 
-
 @mixin min-width($width) {
-  @media screen and (min-width: $width) {
-    @content;
-  }
+	@media screen and (min-width: $width) {
+		@content;
+	}
 }
