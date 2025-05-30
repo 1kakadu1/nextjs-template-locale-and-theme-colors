@@ -43,12 +43,18 @@ export default async function RootLayout({
 		{ label: 'Category 4', href: RoutesPath.home },
 	];
 	return (
-		<html lang={locale} data-theme={theme}>
+		<html
+			lang={locale}
+			data-theme={theme}
+		>
 			<body className={`${fontManrope.variable} ${workSansFont.variable}`}>
 				<NextIntlClientProvider>
 					<Header menu={MENU} />
 					{children}
-					<Footer menu={MENU} categories={CATEGORIES} />
+					<Footer
+						menu={MENU}
+						categories={CATEGORIES}
+					/>
 				</NextIntlClientProvider>
 			</body>
 		</html>

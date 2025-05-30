@@ -21,6 +21,7 @@
 		"^[./]",
 		"(.scss|.css)"
 	],
+	"singleAttributePerLine": true,
 	"importOrderSeparation": false,
 	"importOrderSortSpecifiers": true
 }

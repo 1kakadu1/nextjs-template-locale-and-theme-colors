@@ -30,7 +30,10 @@ export default async function Home() {
 			<br></br>
 			<Button variant="outline">View All Post</Button>
 			<br></br>
-			<Button variant="outline" disabled>
+			<Button
+				variant="outline"
+				disabled
+			>
 				View All Post
 			</Button>
 		</div>

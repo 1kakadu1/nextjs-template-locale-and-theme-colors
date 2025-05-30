@@ -33,7 +33,10 @@ export const InputField = forwardRef(
 				data-testid="input"
 			>
 				{label && (
-					<label className={cl['input-form-control__label']} htmlFor={id}>
+					<label
+						className={cl['input-form-control__label']}
+						htmlFor={id}
+					>
 						{label}
 					</label>
 				)}

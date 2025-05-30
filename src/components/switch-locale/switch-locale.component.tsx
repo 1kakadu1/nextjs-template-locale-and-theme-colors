@@ -36,9 +36,15 @@ export const SwitchLocale = ({ className = '' }: ISwitchLocaleProps) => {
 			>
 				{locale.toLocaleUpperCase()}
 			</button>
-			<ul className={cl.list + ' ' + (open ? cl.open : '')} ref={ref}>
+			<ul
+				className={cl.list + ' ' + (open ? cl.open : '')}
+				ref={ref}
+			>
 				{locales.map((item) => (
-					<li key={item} className={locale === item ? cl.active : ''}>
+					<li
+						key={item}
+						className={locale === item ? cl.active : ''}
+					>
 						<button
 							disabled={locale === item}
 							onClick={onChangeLocale}

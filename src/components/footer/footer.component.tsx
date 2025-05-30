@@ -34,7 +34,10 @@ export const Footer = ({
 							className={cl.link}
 						>
 							{t('forms.fields.email')}:
-							<Typography.Span weight={400} className={cl.link__label}>
+							<Typography.Span
+								weight={400}
+								className={cl.link__label}
+							>
 								info@mail.net
 							</Typography.Span>
 						</Typography.Link>
@@ -44,7 +47,10 @@ export const Footer = ({
 							className={cl.link}
 						>
 							{t('forms.fields.phone')}:
-							<Typography.Span weight={400} className={cl.link__label}>
+							<Typography.Span
+								weight={400}
+								className={cl.link__label}
+							>
 								880 123 456 789
 							</Typography.Span>
 						</Typography.Link>
@@ -76,7 +82,10 @@ export const Footer = ({
 							<form className={cl.form}>
 								<Typography.H4>{t('base.title.subscribe')}</Typography.H4>
 								<Typography.P>{t('base.text.subscribe_desc')}</Typography.P>
-								<InputField placeholder="Your Email" variant="secondary" />
+								<InputField
+									placeholder="Your Email"
+									variant="secondary"
+								/>
 								<Button className={cl.form__btn}>
 									{t('base.btn.subscribe')}
 								</Button>

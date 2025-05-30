@@ -2,6 +2,7 @@ import { FlatCompat } from '@eslint/eslintrc';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import prettier from 'prettier';
+// import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,6 +16,7 @@ const eslintConfig = [
 		'next/core-web-vitals',
 		'next/typescript',
 		'prettier',
+		//'plugin:unicorn/recommended'
 	),
 	{
 		ignores: [
@@ -36,6 +38,7 @@ const eslintConfig = [
 			'.hygen.js',
 		],
     plugins: {
+		// unicorn: eslintPluginUnicorn,
 		prettier,
 	},
 	rules: {
@@ -58,7 +61,8 @@ const eslintConfig = [
 		'react/display-name': 'off',
 		'react-hooks/rules-of-hooks': 'off',
 		'@ts-ignore': 'off',
-		'no-anonymous-default-export': 'off'
+		'no-anonymous-default-export': 'off',
+		'linebreak-style': ['error', 'unix']
 	},
 	},
 ];

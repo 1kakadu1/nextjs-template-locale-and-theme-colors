@@ -23,12 +23,18 @@ export const Header = ({
 	return (
 		<header className={cl.header}>
 			<div className={'container ' + cl.grid}>
-				<Link className={cl.logo} href={RoutesPath.home}>
+				<Link
+					className={cl.logo}
+					href={RoutesPath.home}
+				>
 					<LogoMain />
 				</Link>
 				<nav className={cl.menu}>
 					{menu.map((item, index) => (
-						<ButtonLink href={item.href} key={index + '-menu'}>
+						<ButtonLink
+							href={item.href}
+							key={index + '-menu'}
+						>
 							{item.label}
 						</ButtonLink>
 					))}

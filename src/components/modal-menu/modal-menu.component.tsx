@@ -13,7 +13,10 @@ export const ModalMenu = ({ className = '' }: IModalMenuProps) => {
 
 	return (
 		<div className={cl.class + ' ' + className}>
-			<ButtonBurger open={open} onToggle={setOpen} />
+			<ButtonBurger
+				open={open}
+				onToggle={setOpen}
+			/>
 			<Modal
 				onClose={() => setOpen(false)}
 				open={open}
