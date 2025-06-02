@@ -1,0 +1,13 @@
+.card{
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.avatar{
+    border-radius: 32px;
+    object-fit: cover;
+    object-position: center;
+}
+

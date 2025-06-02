@@ -1,0 +1,21 @@
+.chip{
+    color: var(--chip-text);
+    font-size: toRem(14);
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 6px;
+    background-color: var(--chip);
+    padding: 4px 10px;
+    width: min-content;
+    &.light{
+       background-color: var(--chip-light); 
+       color: var(--chip-light-text);
+    }
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 6px
+}

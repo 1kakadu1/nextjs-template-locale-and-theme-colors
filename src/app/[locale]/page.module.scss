@@ -1,0 +1,35 @@
+.grid{
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+h3.title{
+    padding-top: 64px;
+    padding-bottom: 32px;
+}
+
+.actions{
+    display: flex;
+    justify-content: center;
+    padding: 32px 0px 80px 32px;
+}
+
+.gridPost{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: 'one two' 'one three';
+    gap: 20px;
+    a:nth-child(1){
+        grid-area: one;
+    }
+    a:nth-child(2){grid-area: two;}
+    a:nth-child(3){grid-area: three;}
+}
+
+.tags{
+    margin: 32px 0;
+}

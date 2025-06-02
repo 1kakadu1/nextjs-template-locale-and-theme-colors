@@ -15,6 +15,7 @@
 	--paper-secondary: #e8e8ea;
 	--modal: #fff;
 	--overlay: #000000b3;
+	--white: #fff;
 	/* END BASE */
 	/* BTN */
 	--btn: #4b6bfb;
@@ -52,10 +53,22 @@
 	/* END FOOTER */
 
 	/* MENU */
-	--hamburger-line-dark: ;
-	--hamburger-line-light: ;
+	--hamburger-line: #141624;
 	/* END MENU */
 
+	/* CHIPS */
+	--chip-light: rgba(75, 107, 251, 0.05);
+	--chip: #4b6bfb;
+	--chip-text: #fff;	
+	--chip-light-text: #4B6BFB;
+	/* END CHIPS */
+	/* TAGS */
+	--tag-light: rgba(75, 107, 251, 0.05);
+	--tag-light-hover: rgba(75, 107, 251, 0.2);
+	--tag: #4b6bfb;
+	--tag-text: #fff;	
+	--tag-light-text: #4B6BFB;
+	/* END TAGS */
 	/* NEXT VARS */
 	/*
         font: --font-Manrope
@@ -73,7 +86,7 @@
 	--icon: #52525b;
 	--text: #97989f;
 	--background: #181a2a;
-	--hr: #242535;
+	--hr: rgba(59, 60, 74, 0.8);
 	--link: #fff;
 	--paper: #242535;
 	--paper-secondary: #242535;
@@ -106,6 +119,13 @@
 	--input-secondary: #181a2a;
 	--input-secondary-text: #9fa0a7;
 	/* END INPUT */
+	/* TAGS */
+	--tag-light: rgba(75, 107, 251, 0.2);
+	--tag-light-hover: rgba(75, 107, 251, 0.4);
+	/* END TAGS */
+	/* MENU */
+	--hamburger-line: #fff;
+	/* END MENU */
 	/*FOOTER*/
 	--footer: #141624;
 	/* END FOOTER */

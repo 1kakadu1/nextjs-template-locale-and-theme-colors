@@ -1,5 +1,6 @@
-import { AnchorHTMLAttributes, HTMLAttributes, ReactElement } from 'react';
+import { AnchorHTMLAttributes, HTMLAttributes } from 'react';
 import {
+	RenderPorpsType,
 	TypographyBaseProps,
 	TypographyElement,
 	TypographyElementWeight,
@@ -11,7 +12,7 @@ const baseStyle = (
 	className = '',
 	element?: TypographyElement,
 	weight?: TypographyElementWeight,
-) => {
+): string => {
 	return `${className}  ${element ? cl[element] : cl[style]} ${weight ? cl['w' + weight] : ''}`;
 };
 
@@ -137,6 +138,15 @@ const HtmlRender = ({
 	);
 };
 
+const RenderProps = <T,>({
+	className,
+	elementClass,
+	...props
+}: RenderPorpsType<T>) => {
+	const baseClass = baseStyle(elementClass || 'p', className, elementClass, props.weight);
+	return props.render({className: baseClass ,...props})
+};
+
 const TypographyBase = {
 	P,
 	H1,
@@ -146,6 +156,7 @@ const TypographyBase = {
 	HtmlRender,
 	Span,
 	Link,
+	RenderProps
 };
 
 // const Title = <T,>(

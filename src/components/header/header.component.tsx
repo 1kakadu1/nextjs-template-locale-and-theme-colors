@@ -2,15 +2,12 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { RoutesPath } from '@/@types';
 import {
-	ButtonBurger,
 	ButtonLink,
 	InputField,
 	LogoMain,
 	SearchIcon,
 } from '@/components/ui';
 import { ModalMenu } from '../modal-menu';
-import { SwitchLocale } from '../switch-locale';
-import { ThemeToggle } from '../theme-toggle/theme-toggle';
 import cl from './header.module.scss';
 
 export const Header = ({

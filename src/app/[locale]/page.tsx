@@ -1,41 +1,58 @@
-import { getTranslations } from 'next-intl/server';
-import { ThemeToggle } from '@/components/theme-toggle/theme-toggle';
-import { Button, Typography } from '@/components/ui';
+import { Banner } from '@/components/banner';
+import avatar from '../../../public/images/Image.png';
+import banner from '../../../public/images/Image.jpg';
+import cl from "./page.module.scss";
+import { MOCK_POSTS, MOCK_POSTS_FLUID } from '@/mock/post';
+import { CardPost } from '@/components/cards/card-post';
+import { ButtonLink, Typography } from '@/components/ui';
+import { CardPostFluid } from '@/components/cards/card-post-fluid';
+import { TagList } from '@/components/tag-list';
+import { MOCK_TAGS } from '@/mock/tags';
 
 export default async function Home() {
-	// const t = await getTranslations('base');
 	return (
 		<div className={'container'}>
-			<Typography.H1>
-				The Impact of Technology on the Workplace: How Technology is Changing
-			</Typography.H1>
-			<br></br>
-			<Typography.H2>
-				The Impact of Technology on the Workplace: How Technology is Changing
-			</Typography.H2>
-			<br></br>
-			<Typography.H3>About</Typography.H3>
-			<br></br>
-			<Typography.P>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam
-			</Typography.P>
-			<br></br>
-			<Typography.Span>Tracey Wilson</Typography.Span>
-			<br></br>
-			<Button>Subscribe</Button>
-			<br></br>
-			<Button disabled>Subscribe</Button>
-			<br></br>
-			<Button variant="outline">View All Post</Button>
-			<br></br>
-			<Button
-				variant="outline"
-				disabled
-			>
-				View All Post
-			</Button>
+			<Banner
+				image={{
+					url: banner.src,
+					alt: '',
+				}}
+				card={{
+					link: '#',
+					user: {
+						name: 'Jason Francisco',
+						preview: avatar.src,
+					},
+					date: 'August 20, 2022',
+					title: 'The Impact of Technology on the Workplace: How Technology is Changing',
+					category: 'Technology',
+				}}
+			/>
+			<section>
+				<Typography.H3 elementClass='h4' className={cl.title}>Latest Post</Typography.H3>
+				<div className={cl.grid}>
+					{
+						MOCK_POSTS.map((item, index) => (
+							<CardPost 
+								key={index}
+								post={item}
+							/>
+						))
+					}
+				</div>
+				<div className={cl.actions}>
+					<ButtonLink href='#!' variant='outline'>View All Post</ButtonLink>
+				</div>
+			</section>
+					
+			<div className={cl.gridPost}>
+				<CardPostFluid post={MOCK_POSTS_FLUID[0]} position='bottom' />
+				<CardPostFluid post={MOCK_POSTS_FLUID[1]} />
+				<CardPostFluid post={MOCK_POSTS_FLUID[2]} />
+			</div>
+
+			<TagList tags={MOCK_TAGS} prefix='#' title='Popular:' border className={cl.tags}/>
+
 		</div>
 	);
 }

@@ -1,17 +1,20 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { setCookie } from '@/utils/cookies.utils';
+import { getCookie, setCookie } from '@/utils/cookies.utils';
 import cl from './theme-toggle.module.scss';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 export type ThemeSite = 'light' | 'dark';
+
+export const THEME_KEY = 'theme'
 
 export function ThemeToggle() {
 	const [theme, setTheme] = useState<ThemeSite>('light');
 
 	useEffect(() => {
 		const savedTheme =
-			localStorage.getItem('theme') ||
+			getCookie(THEME_KEY) ||
 			(window.matchMedia('(prefers-color-scheme: dark)').matches
 				? 'dark'
 				: 'light');
@@ -22,9 +25,8 @@ export function ThemeToggle() {
 	const toggleTheme = () => {
 		const newTheme = theme === 'light' ? 'dark' : 'light';
 		setTheme(newTheme);
-		localStorage.setItem('theme', newTheme);
 		document.documentElement.setAttribute('data-theme', newTheme);
-		setCookie('theme', newTheme, 90);
+		setCookie(THEME_KEY, newTheme, 90);
 	};
 
 	return (

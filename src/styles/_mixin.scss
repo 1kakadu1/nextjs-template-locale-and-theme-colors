@@ -48,6 +48,15 @@ $min-descktop: 1280px;
 	);
 }
 
+
+@mixin clamp($property, $valueMin, $valueMax) {
+	#{$property}: clamp(
+		#{toRem($valueMin)},
+		#{toViewport($valueMax)},
+		#{toRem($valueMax)}
+	);
+}
+
 @function toRem($value) {
 	$remValue: calc($value / 16);
 	@return $remValue + rem;
@@ -74,5 +83,13 @@ $min-descktop: 1280px;
 @mixin min-width($width) {
 	@media screen and (min-width: $width) {
 		@content;
+	}
+}
+
+@mixin hover() {
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
 	}
 }

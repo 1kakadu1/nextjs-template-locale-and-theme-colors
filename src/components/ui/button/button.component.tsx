@@ -16,18 +16,20 @@ export interface IButtonLinkProps
 	children: ReactNode;
 	disabled?: boolean;
 	href: string;
+	variant?: 'flat' | 'outline' | 'fluid';
 }
 
 export const ButtonLink = ({
 	children,
 	className = '',
+	variant = 'flat',
 	href,
 	...props
 }: IButtonLinkProps) => {
 	return (
 		<Link
 			data-testid="button-link"
-			className={`${className} ${cl.link}`}
+			className={`${className} ${variant !== 'flat'? cl.btn : cl.link} ${cl[variant]}`}
 			href={href}
 			{...props}
 		>

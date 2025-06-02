@@ -1,0 +1,23 @@
+.tag{
+    font-size: toRem(14);
+    font-weight: 500;
+    line-height: 20px;
+    border-radius: 6px;
+    padding: 4px 10px;
+    width: min-content;
+    text-decoration: none;
+        transition: color 300ms ease, background-color 300ms ease;
+}
+
+.fluid{
+    color: var(--tag-text);
+    background-color: var(--tag);
+}
+.fluid-light{
+    background-color: var(--tag-light); 
+    color: var(--tag-light-text);
+    @include hover{
+        background-color: var(--tag-light-hover); 
+        transition: color 300ms ease, background-color 300ms ease;
+    }
+}
