@@ -7,13 +7,12 @@ import {
 	Typography,
 } from '@/components/ui';
 import { useGetTranslations } from '@/hooks/useGetTranslations';
+import { Menu } from '../menu';
 import cl from './footer.module.scss';
 
 export const Footer = ({
-	menu,
 	categories,
 }: {
-	menu: { label: string; href: string }[];
 	categories: { label: string; href: string }[];
 }) => {
 	const { t, locale } = useGetTranslations();
@@ -58,13 +57,7 @@ export const Footer = ({
 					<div className={cl.menu}>
 						<div className={cl.menu__site}>
 							<Typography.H4>{t('base.title.menu')}</Typography.H4>
-							<ul>
-								{menu.map((item, index) => (
-									<li key={index + '-menu-' + locale}>
-										<ButtonLink href={item.href}>{item.label}</ButtonLink>
-									</li>
-								))}
-							</ul>
+							<Menu list />
 						</div>
 						<div className={cl.menu__site}>
 							<Typography.H4>{t('base.title.categories')}</Typography.H4>

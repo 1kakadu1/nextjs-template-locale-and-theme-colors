@@ -10,14 +10,23 @@ import cl from './card-post-fluid.module.scss';
 
 export const CardPostFluid = ({
 	className = '',
-  position = 'center',
+	position = 'center',
 	post,
+	hideFooter = false,
 }: ICardPostFluidProps) => {
 	const { href, preview, category, title, date, user } = post;
 	return (
 		<Link
 			href={href}
-			className={cl.card + ' ' + className +" "+cl[position]}
+			className={
+				cl.card +
+				' ' +
+				className +
+				' ' +
+				cl[position] +
+				' ' +
+				(hideFooter ? cl.hide__footer : '')
+			}
 		>
 			<Image
 				src={preview}
@@ -26,27 +35,27 @@ export const CardPostFluid = ({
 				sizes="100vw"
 				loading="lazy"
 				decoding="async"
-        className={cl.preview}
+				className={cl.preview}
 			/>
 			<div className={cl.body}>
 				<div>
-					<ArticleCategory
-						list={[category]}
-					/>
+					<ArticleCategory list={[category]} />
 					<Typography.H3
-						elementClass="h4"
+						elementClass={hideFooter ? 'h5' : 'h4'}
 						className={cl.title}
 					>
 						{title}
 					</Typography.H3>
 				</div>
-				<ArticleCreateInfo
-          className={cl.create}
-					date={date}
-					preview={user.avatar}
-					name={user.name}
-          classNameUser={cl.user}
-				/>
+				{!hideFooter && (
+					<ArticleCreateInfo
+						className={cl.create}
+						date={date}
+						preview={user.avatar}
+						name={user.name}
+						classNameUser={cl.user}
+					/>
+				)}
 			</div>
 		</Link>
 	);

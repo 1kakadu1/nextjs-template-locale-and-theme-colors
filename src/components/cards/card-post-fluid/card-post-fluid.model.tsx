@@ -1,7 +1,8 @@
-export interface ICardPostFluidProps{
-    className?: string;
-    post: ICardPostFluid;
-    position?: "bottom" | "center"
+export interface ICardPostFluidProps {
+	className?: string;
+	post: ICardPostFluid;
+	position?: 'bottom' | 'center';
+	hideFooter?: boolean;
 }
 
 export interface ICardPostFluid {

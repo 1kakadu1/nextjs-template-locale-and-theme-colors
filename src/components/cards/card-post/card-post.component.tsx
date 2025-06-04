@@ -21,15 +21,23 @@ export const CardPost = ({ className = '', post }: ICardPostProps) => {
 						src={preview}
 						alt=""
 						fill
-						loading='lazy'
-						decoding='async'
+						loading="lazy"
+						decoding="async"
 					/>
 				</div>
 
 				<div className={cl.body}>
 					<div>
-						<ArticleCategory list={[category]} light/>
-						<Typography.H3 elementClass='h4' className={cl.title}>{title}</Typography.H3>
+						<ArticleCategory
+							list={[category]}
+							light
+						/>
+						<Typography.H3
+							elementClass="h4"
+							className={cl.title}
+						>
+							{title}
+						</Typography.H3>
 					</div>
 					<ArticleCreateInfo
 						date={date}

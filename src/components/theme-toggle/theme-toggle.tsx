@@ -1,13 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
 import { getCookie, setCookie } from '@/utils/cookies.utils';
 import cl from './theme-toggle.module.scss';
-import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 export type ThemeSite = 'light' | 'dark';
 
-export const THEME_KEY = 'theme'
+export const THEME_KEY = 'theme';
 
 export function ThemeToggle() {
 	const [theme, setTheme] = useState<ThemeSite>('light');

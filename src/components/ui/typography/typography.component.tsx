@@ -143,8 +143,13 @@ const RenderProps = <T,>({
 	elementClass,
 	...props
 }: RenderPorpsType<T>) => {
-	const baseClass = baseStyle(elementClass || 'p', className, elementClass, props.weight);
-	return props.render({className: baseClass ,...props})
+	const baseClass = baseStyle(
+		elementClass || 'p',
+		className,
+		elementClass,
+		props.weight,
+	);
+	return props.render({ className: baseClass, ...props });
 };
 
 const TypographyBase = {
@@ -156,7 +161,7 @@ const TypographyBase = {
 	HtmlRender,
 	Span,
 	Link,
-	RenderProps
+	RenderProps,
 };
 
 // const Title = <T,>(

@@ -1,35 +1,87 @@
-.grid{
-
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+.grid {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+	gap: 16px;
+	@include min-tablet {
+		gap: 20px;
+		grid-template-columns: 1fr 1fr;
+	}
+	@include min-tablet-big {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
-h3.title{
-    padding-top: 64px;
-    padding-bottom: 32px;
+.section__titel__wrap {
+	padding-top: 64px;
+	padding-bottom: 32px;
 }
 
-.actions{
-    display: flex;
-    justify-content: center;
-    padding: 32px 0px 80px 32px;
+.actions {
+	display: flex;
+	justify-content: center;
+	padding: 32px 0px 80px 32px;
 }
 
-.gridPost{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 300px;
-    grid-template-areas: 'one two' 'one three';
-    gap: 20px;
-    a:nth-child(1){
-        grid-area: one;
-    }
-    a:nth-child(2){grid-area: two;}
-    a:nth-child(3){grid-area: three;}
+.gridPost {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'one one' 'two two' 'three three';
+	grid-template-rows: repeat(3, 250px);
+	gap: 12px;
+	a:nth-child(1) {
+		grid-area: one;
+	}
+	a:nth-child(2) {
+		grid-area: two;
+	}
+	a:nth-child(3) {
+		grid-area: three;
+	}
+	@include min-width(575) {
+		grid-template-areas: 'one one' 'two three';
+		grid-template-rows: 300px 300px;
+	}
+	@include min-tablet {
+		gap: 20px;
+		grid-template-areas: 'one two' 'one three';
+		grid-template-rows: 300px 300px;
+	}
 }
 
-.tags{
-    margin: 32px 0;
+div.tags {
+	margin: 32px 0;
+	align-items: flex-start;
+	@include min-tablet {
+		align-items: center;
+	}
+}
+
+.grid__posts {
+	display: grid;
+	grid-template-columns: 0.8fr 1fr;
+	gap: 20px;
+	grid-template-rows: auto;
+	@include min-descktop {
+		grid-template-columns: 0.6fr 1.4fr;
+	}
+}
+
+.grid__list__posts {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	gap: 20px;
+}
+
+.list {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	& > a {
+		min-height: 200px;
+		@include min-tablet {
+			min-height: 316px;
+		}
+	}
 }

@@ -29,7 +29,7 @@ export const ButtonLink = ({
 	return (
 		<Link
 			data-testid="button-link"
-			className={`${className} ${variant !== 'flat'? cl.btn : cl.link} ${cl[variant]}`}
+			className={`${className} ${variant !== 'flat' ? cl.btn : cl.link} ${cl[variant]}`}
 			href={href}
 			{...props}
 		>

@@ -1,5 +1,5 @@
-export interface IUserPreviewProps{
-    className?: string;
-    avatar?: string;
-    name?: string;
+export interface IUserPreviewProps {
+	className?: string;
+	avatar?: string;
+	name?: string;
 }

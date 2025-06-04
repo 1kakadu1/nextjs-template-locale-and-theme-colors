@@ -59,15 +59,15 @@
 	/* CHIPS */
 	--chip-light: rgba(75, 107, 251, 0.05);
 	--chip: #4b6bfb;
-	--chip-text: #fff;	
-	--chip-light-text: #4B6BFB;
+	--chip-text: #fff;
+	--chip-light-text: #4b6bfb;
 	/* END CHIPS */
 	/* TAGS */
 	--tag-light: rgba(75, 107, 251, 0.05);
 	--tag-light-hover: rgba(75, 107, 251, 0.2);
 	--tag: #4b6bfb;
-	--tag-text: #fff;	
-	--tag-light-text: #4B6BFB;
+	--tag-text: #fff;
+	--tag-light-text: #4b6bfb;
 	/* END TAGS */
 	/* NEXT VARS */
 	/*

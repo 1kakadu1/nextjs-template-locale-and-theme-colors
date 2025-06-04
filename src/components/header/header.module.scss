@@ -20,9 +20,22 @@
 	gap: 30px;
 }
 
-.actions,
-.menu {
+.actions {
 	display: flex;
 	align-items: center;
 	gap: 40px;
+}
+
+.menu {
+	display: none;
+	@include min-tablet-big {
+		display: flex;
+	}
+}
+
+.search {
+	display: none;
+	@include min-tablet {
+		display: block;
+	}
 }

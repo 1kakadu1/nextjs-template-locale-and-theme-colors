@@ -1,13 +1,15 @@
-import { Banner } from '@/components/banner';
-import avatar from '../../../public/images/Image.png';
-import banner from '../../../public/images/Image.jpg';
-import cl from "./page.module.scss";
 import { MOCK_POSTS, MOCK_POSTS_FLUID } from '@/mock/post';
-import { CardPost } from '@/components/cards/card-post';
-import { ButtonLink, Typography } from '@/components/ui';
-import { CardPostFluid } from '@/components/cards/card-post-fluid';
-import { TagList } from '@/components/tag-list';
 import { MOCK_TAGS } from '@/mock/tags';
+import { Banner } from '@/components/banner';
+import { CardPost } from '@/components/cards/card-post';
+import { CardPostFluid } from '@/components/cards/card-post-fluid';
+import { CardPostSmall } from '@/components/cards/card-post-small';
+import { SectionHeader } from '@/components/section-header';
+import { TagList } from '@/components/tag-list';
+import { ButtonLink, Typography } from '@/components/ui';
+import banner from '../../../public/images/Image.jpg';
+import avatar from '../../../public/images/Image.png';
+import cl from './page.module.scss';
 
 export default async function Home() {
 	return (
@@ -24,35 +26,132 @@ export default async function Home() {
 						preview: avatar.src,
 					},
 					date: 'August 20, 2022',
-					title: 'The Impact of Technology on the Workplace: How Technology is Changing',
+					title:
+						'The Impact of Technology on the Workplace: How Technology is Changing',
 					category: 'Technology',
 				}}
 			/>
 			<section>
-				<Typography.H3 elementClass='h4' className={cl.title}>Latest Post</Typography.H3>
+				<SectionHeader
+					title="Latest Post"
+					className={cl.section__titel__wrap}
+				/>
 				<div className={cl.grid}>
-					{
-						MOCK_POSTS.map((item, index) => (
-							<CardPost 
-								key={index}
-								post={item}
-							/>
-						))
-					}
+					{MOCK_POSTS.map((item, index) => (
+						<CardPost
+							key={index}
+							post={item}
+						/>
+					))}
 				</div>
 				<div className={cl.actions}>
-					<ButtonLink href='#!' variant='outline'>View All Post</ButtonLink>
+					<ButtonLink
+						href="#!"
+						variant="outline"
+					>
+						View All Post
+					</ButtonLink>
 				</div>
 			</section>
-					
+
 			<div className={cl.gridPost}>
-				<CardPostFluid post={MOCK_POSTS_FLUID[0]} position='bottom' />
+				<CardPostFluid
+					post={MOCK_POSTS_FLUID[0]}
+					position="bottom"
+				/>
 				<CardPostFluid post={MOCK_POSTS_FLUID[1]} />
 				<CardPostFluid post={MOCK_POSTS_FLUID[2]} />
 			</div>
 
-			<TagList tags={MOCK_TAGS} prefix='#' title='Popular:' border className={cl.tags}/>
+			<TagList
+				tags={MOCK_TAGS}
+				prefix="#"
+				title="Popular:"
+				border
+				className={cl.tags}
+			/>
 
+			<section>
+				<SectionHeader
+					title="Title one"
+					link={{ href: '#', label: 'View all' }}
+					className={cl.section__titel__wrap}
+				/>
+				<div className={cl.list}>
+					<CardPostFluid
+						post={MOCK_POSTS_FLUID[0]}
+						position="bottom"
+						hideFooter
+					/>
+					<CardPostFluid
+						post={MOCK_POSTS_FLUID[0]}
+						position="bottom"
+						hideFooter
+					/>
+					<CardPostFluid
+						post={MOCK_POSTS_FLUID[0]}
+						position="bottom"
+						hideFooter
+					/>
+					<CardPostFluid
+						post={MOCK_POSTS_FLUID[0]}
+						position="bottom"
+						hideFooter
+					/>
+				</div>
+			</section>
+
+			<section>
+				<SectionHeader
+					title="Title two"
+					link={{ href: '#', label: 'View all' }}
+					className={cl.section__titel__wrap}
+				/>
+				<div className={cl.grid__posts}>
+					<CardPostFluid
+						post={MOCK_POSTS_FLUID[0]}
+						position="bottom"
+					/>
+					<div className={cl.grid__list__posts}>
+						<CardPostSmall
+							preview={MOCK_POSTS_FLUID[0].preview}
+							date={MOCK_POSTS_FLUID[0].date}
+							title={MOCK_POSTS_FLUID[0].title}
+							href={MOCK_POSTS_FLUID[0].href}
+						/>
+						<CardPostSmall
+							preview={MOCK_POSTS_FLUID[0].preview}
+							date={MOCK_POSTS_FLUID[0].date}
+							title={MOCK_POSTS_FLUID[0].title}
+							href={MOCK_POSTS_FLUID[0].href}
+						/>
+						<CardPostSmall
+							preview={MOCK_POSTS_FLUID[0].preview}
+							date={MOCK_POSTS_FLUID[0].date}
+							title={MOCK_POSTS_FLUID[0].title}
+							href={MOCK_POSTS_FLUID[0].href}
+						/>
+						<CardPostSmall
+							preview={MOCK_POSTS_FLUID[0].preview}
+							date={MOCK_POSTS_FLUID[0].date}
+							title={MOCK_POSTS_FLUID[0].title}
+							href={MOCK_POSTS_FLUID[0].href}
+						/>
+						<CardPostSmall
+							preview={MOCK_POSTS_FLUID[0].preview}
+							date={MOCK_POSTS_FLUID[0].date}
+							title={MOCK_POSTS_FLUID[0].title}
+							href={MOCK_POSTS_FLUID[0].href}
+						/>
+						<CardPostSmall
+							preview={MOCK_POSTS_FLUID[0].preview}
+							date={MOCK_POSTS_FLUID[0].date}
+							title={MOCK_POSTS_FLUID[0].title}
+							href={MOCK_POSTS_FLUID[0].href}
+						/>
+					</div>
+				</div>
+			</section>
 		</div>
 	);
 }

@@ -30,11 +30,6 @@ export default async function RootLayout({
 		notFound();
 	}
 
-	const MENU = [
-		{ label: t('menu.blog'), href: RoutesPath.home },
-		{ label: t('menu.about'), href: RoutesPath.home },
-		{ label: t('menu.contacts'), href: RoutesPath.home },
-	];
 	const CATEGORIES = [
 		{ label: 'Category 1', href: RoutesPath.home },
 		{ label: 'Category 1', href: RoutesPath.home },
@@ -49,12 +44,9 @@ export default async function RootLayout({
 		>
 			<body className={`${fontManrope.variable} ${workSansFont.variable}`}>
 				<NextIntlClientProvider>
-					<Header menu={MENU} />
+					<Header />
 					{children}
-					<Footer
-						menu={MENU}
-						categories={CATEGORIES}
-					/>
+					<Footer categories={CATEGORIES} />
 				</NextIntlClientProvider>
 			</body>
 		</html>

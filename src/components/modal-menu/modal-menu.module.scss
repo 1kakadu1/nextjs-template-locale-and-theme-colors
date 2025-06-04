@@ -2,9 +2,15 @@
 	height: 100vh;
 	border-radius: 0px;
 	background-color: var(--modal);
-	width: 30%;
+	width: 86%;
 	padding: 16px;
 	border-left: 1px solid var(--hr);
+	@include min-tablet {
+		width: 60%;
+	}
+	@include min-descktop {
+		width: 30%;
+	}
 }
 
 .modal__overlay {
@@ -15,5 +21,24 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 20px;
-	margin-top: 40px;
+	margin-top: 60px;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.menu {
+	ul li {
+		margin-top: 24px;
+		text-align: right;
+		a {
+			@include fontSize(16, 28);
+		}
+	}
+}
+
+.search {
 }

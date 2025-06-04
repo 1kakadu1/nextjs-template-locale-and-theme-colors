@@ -1,20 +1,12 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { RoutesPath } from '@/@types';
-import {
-	ButtonLink,
-	InputField,
-	LogoMain,
-	SearchIcon,
-} from '@/components/ui';
+import { Menu } from '@/components/menu';
+import { ButtonLink, InputField, LogoMain, SearchIcon } from '@/components/ui';
 import { ModalMenu } from '../modal-menu';
 import cl from './header.module.scss';
 
-export const Header = ({
-	menu,
-}: {
-	menu: { label: string; href: string }[];
-}) => {
+export const Header = () => {
 	const t = useTranslations();
 
 	return (
@@ -26,16 +18,7 @@ export const Header = ({
 				>
 					<LogoMain />
 				</Link>
-				<nav className={cl.menu}>
-					{menu.map((item, index) => (
-						<ButtonLink
-							href={item.href}
-							key={index + '-menu'}
-						>
-							{item.label}
-						</ButtonLink>
-					))}
-				</nav>
+				<Menu className={cl.menu} />
 				<div className={cl.actions}>
 					<InputField
 						className={cl.search}

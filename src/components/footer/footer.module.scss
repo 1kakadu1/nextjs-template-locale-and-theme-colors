@@ -13,8 +13,26 @@
 div.row {
 	gap: 30px;
 	align-items: flex-start;
+	flex-wrap: wrap;
 	& > div {
-		width: 33%;
+		width: 100%;
+	}
+	.subscribe {
+		width: 100%;
+	}
+	@include min-tablet {
+		& > div {
+			width: calc(50% - 30px);
+		}
+	}
+	@include min-tablet-big {
+		flex-wrap: nowrap;
+		.subscribe {
+			width: 33%;
+		}
+		& > div {
+			width: 33%;
+		}
 	}
 	@include min-descktop {
 		gap: 80px;
@@ -37,20 +55,30 @@ div.row {
 
 .menu {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 10px;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	gap: 30px;
+	@media (width >= 1280px) {
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+	}
 }
 
 .menu__site {
 	ul {
-		padding-top: 16px;
+		padding-top: 6px;
 		li {
-			margin-top: 8px;
+			margin-top: 4px;
 		}
 	}
-}
-
-.subscribe {
+	@media (width >= 1280px) {
+		ul {
+			padding-top: 16px;
+			li {
+				margin-top: 8px;
+			}
+		}
+	}
 }
 
 .form {
@@ -68,6 +96,11 @@ div.row {
 	padding-top: 32px;
 	width: 100%;
 	border-top: 1px solid var(--hr);
+	flex-direction: column;
+	gap: 20px;
+	@include min-tablet {
+		flex-direction: row;
+	}
 }
 .row__bottom__left {
 	display: flex;
