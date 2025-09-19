@@ -34,7 +34,7 @@ div.row {
 			width: 33%;
 		}
 	}
-	@include min-descktop {
+	@include min-desktop {
 		gap: 80px;
 	}
 }

@@ -1,0 +1,55 @@
+.action {
+	color: var(--primary);
+	cursor: pointer;
+	text-decoration: none;
+	background-color: transparent;
+	border: none;
+	transition: color 300ms ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	@media (hover: hover) {
+		&:hover {
+			transition: color 300ms ease;
+			color: var(--hover);
+			.label {
+				transition: color 300ms ease;
+				color: var(--hover);
+			}
+		}
+	}
+	&.active {
+		transition: color 300ms ease;
+		color: var(--hover);
+		.label {
+			transition: color 300ms ease;
+			color: var(--hover);
+		}
+	}
+}
+
+.label {
+	transition: color 300ms ease;
+	padding-top: 2px;
+	color: var(--primary);
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 120%;
+}
+
+.badge {
+	background-color: var(--active);
+	width: 15px;
+	height: 12px;
+	position: absolute;
+	top: -2px;
+	right: 0px;
+	color: var(--white);
+	font-size: 10px;
+	font-weight: 500;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

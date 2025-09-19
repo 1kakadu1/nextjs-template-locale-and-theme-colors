@@ -1,0 +1,39 @@
+.wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	&.reverse {
+		flex-direction: column-reverse;
+	}
+}
+.expander {
+	display: grid;
+	grid-template-rows: 0fr;
+	overflow: hidden;
+	transition: grid-template-rows 1s;
+}
+.expander-content {
+	min-height: 0;
+	transition: visibility 1s;
+	visibility: hidden;
+}
+.expander.expanded {
+	grid-template-rows: 1fr;
+}
+.expander.expanded .expander-content {
+	visibility: visible;
+}
+
+.action {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+.off__action {
+	width: 100%;
+}
+.disabled {
+	pointer-events: none;
+	cursor: text;
+}

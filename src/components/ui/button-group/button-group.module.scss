@@ -1,0 +1,117 @@
+.group {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	max-width: fit-content;
+	&.base {
+		padding: 2px;
+		border-radius: 2px;
+		background: var(--button-group);
+		gap: 2px;
+		border-radius: 4px;
+	}
+	&.big {
+		border-radius: 4px;
+		background-color: transparent;
+		gap: 8px;
+	}
+	&.light {
+		border-radius: 4px;
+		background: var(--button-group-light);
+		gap: 4px;
+		padding: 4px;
+	}
+}
+
+.btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	position: relative;
+	cursor: pointer;
+	font-weight: 500;
+	transition:
+		color 300ms ease,
+		background-color 300ms ease;
+	&:disabled {
+		transition:
+			color 300ms ease,
+			background-color 300ms ease;
+	}
+	span {
+		color: inherit;
+		font-size: toRem(10);
+	}
+	&.base {
+		border-radius: 4px;
+		min-height: 24px;
+		padding: 6px 8px;
+		background-color: var(--button-group-btn);
+		border: none;
+		font-size: toRem(14);
+		color: var(--button-group-label);
+		&:disabled {
+			color: var(--button-group-label-active);
+			background-color: var(--button-group-active);
+		}
+		@media (hover: hover) {
+			&:hover:not([disabled]) {
+				color: var(--button-group-label-hover);
+				transition:
+					color 300ms ease,
+					background-color 300ms ease;
+			}
+		}
+	}
+	&.light {
+		min-height: 20px;
+		padding: 4px 12px;
+		border-radius: 4px;
+		background-color: var(--button-group-light-btn);
+		border: none;
+		font-size: toRem(12);
+		color: var(--button-group-light-label);
+		&:disabled {
+			color: var(--button-group-light-label-active);
+			background-color: var(--button-group-light-active);
+		}
+	}
+	&.big {
+		padding: 12px;
+		min-height: 72px;
+		font-size: toRem(16);
+		font-weight: 600;
+		color: var(--button-group-big-label);
+		background-color: var(--button-group-big);
+		border: none;
+		border-radius: 4px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: calc(100% - 4px);
+			height: calc(100% - 4px);
+			border-radius: 4px;
+			background-color: transparent;
+			border: 2px solid var(--white);
+			left: 0;
+			top: 0;
+			margin: 2px;
+		}
+		&:disabled {
+			border: none;
+			color: var(--button-group-big-label-active);
+			background-color: var(--button-group-big-active);
+		}
+		@media (hover: hover) {
+			&:hover:not([disabled]) {
+				color: var(--button-group-big-label-hover);
+				transition:
+					color 300ms ease,
+					background-color 300ms ease;
+			}
+		}
+	}
+}

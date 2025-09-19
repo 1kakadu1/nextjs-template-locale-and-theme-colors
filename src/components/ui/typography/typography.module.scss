@@ -1,33 +1,28 @@
 .h1 {
-	@include fontSize(32, 64);
+	@include fontSize(32, 40);
 	font-weight: 700;
 	line-height: 100%;
-	color: var(--primary);
 }
 
 .h2 {
-	@include fontSize(40, 64);
+	@include fontSize(20, 26);
 	font-weight: 700;
 	line-height: 100%;
-	color: var(--primary);
 }
 
 .h3 {
-	@include fontSize(18, 36);
+	@include fontSize(18, 24);
 	font-weight: 600;
-	color: var(--primary);
 }
 
 .h4 {
-	@include fontSize(16, 24);
+	@include fontSize(16, 20);
 	font-weight: 600;
 	line-height: 28px;
-	color: var(--primary);
 }
 
 .h5 {
-	@include fontSize(14, 18);
-	color: var(--primary);
+	@include fontSize(16, 18);
 }
 
 .p,
@@ -36,11 +31,9 @@
 	@include fontSize(14, 16);
 	font-weight: 400;
 	line-height: 24px;
-	color: var(--text);
 }
 
 .a {
-	color: var(--link);
 	text-decoration: none;
 }
 
@@ -51,17 +44,109 @@
 }
 
 .white {
-	color: var(--primary);
+	color: var(--white);
 }
 
 .dark {
-	color: var(--Text-Dark-Primary);
+	color: var(--dark);
 }
 
-.dark-light {
-	color: var(--Text-Dark-Secondary);
+.dark-blue {
+	color: var(--dark-blue);
+}
+
+.default,
+.primary {
+	color: var(--primary);
 }
 
 .gray {
-	color: var(--Text-White-Secondary);
+	color: var(--gray);
+}
+
+.gray-secondary {
+	color: var(--gray-secondary);
+}
+
+.gray-light {
+	color: var(--text-text-secondary);
+}
+
+.accent,
+.secondary {
+	color: var(--secondary);
+}
+
+.hover {
+	color: var(--hover);
+}
+
+.active {
+	color: var(--active);
+}
+
+.link {
+	color: var(--primary);
+	transition: color 300ms ease;
+	@media (hover: hover) {
+		&:hover {
+			color: var(--hover);
+			transition: color 300ms ease;
+		}
+	}
+}
+.s10 {
+	font-size: toRem(10);
+}
+.s12 {
+	@include fontSize(10, 12);
+}
+.s14 {
+	@include fontSize(12, 14);
+}
+.s16 {
+	@include fontSize(12, 16);
+}
+.s18 {
+	@include fontSize(14, 18);
+}
+.s20 {
+	@include fontSize(16, 20);
+}
+.s22 {
+	@include fontSize(20, 22);
+}
+.s24 {
+	@include fontSize(16, 24);
+}
+
+.s26 {
+	@include fontSize(24, 26);
+}
+
+.s28 {
+	@include fontSize(16, 28);
+}
+
+.s32 {
+	@include fontSize(20, 32);
+}
+
+.s40 {
+	@include fontSize(18, 40);
+	@media (max-width: 768px) {
+		line-height: normal;
+	}
+}
+
+.line-height_normal {
+	line-height: normal;
+}
+
+.line-height_120 {
+	line-height: 120%;
+}
+
+.line-height_140 {
+	line-height: 140%;
 }

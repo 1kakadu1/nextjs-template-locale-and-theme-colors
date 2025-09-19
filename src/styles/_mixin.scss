@@ -5,9 +5,11 @@
 $maxWidthContainer: 1280;
 $maxWidth: 1920;
 $weight: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+$min-mobile-big: 575px;
 $min-tablet: 768px;
 $min-tablet-big: 1024px;
-$min-descktop: 1280px;
+$min-desktop: 1280px;
+$min-laptop: 1440px;
 
 @mixin adaptive-var($property, $startSize, $minSize, $type) {
 	$addSize: $startSize - $minSize;
@@ -78,6 +80,12 @@ $min-descktop: 1280px;
 	@return $value;
 }
 
+@mixin min-mobile-big {
+	@media screen and (width >= $min-mobile-big) {
+		@content;
+	}
+}
+
 @mixin min-tablet {
 	@media screen and (width >= $min-tablet) {
 		@content;
@@ -90,8 +98,14 @@ $min-descktop: 1280px;
 	}
 }
 
-@mixin min-descktop {
-	@media screen and (width >= $min-descktop) {
+@mixin min-desktop {
+	@media screen and (width >= $min-desktop) {
+		@content;
+	}
+}
+
+@mixin min-laptop {
+	@media screen and (width >= $min-laptop) {
 		@content;
 	}
 }
@@ -102,10 +116,62 @@ $min-descktop: 1280px;
 	}
 }
 
+@mixin max-width($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin max-tablet {
+	@media screen and (width < $min-tablet) {
+		@content;
+	}
+}
+
+@mixin max-mobile-big {
+	@media screen and (width < $min-mobile-big) {
+		@content;
+	}
+}
+
+@mixin max-tablet-big {
+	@media screen and (width < $min-tablet-big) {
+		@content;
+	}
+}
+
+@mixin max-desktop {
+	@media screen and (width < $min-desktop) {
+		@content;
+	}
+}
+
 @mixin hover() {
 	@media (hover: hover) {
 		&:hover {
 			@content;
 		}
+	}
+}
+
+@mixin ellipsis($line) {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+}
+//TODO: СДЕЛАТЬ ОТДЕЛЬНЫЕ ПЕРЕМЕННЫЕ В vars
+@mixin scrollbar($width: 6px, $thumb_bg: var(--gray), $track_bg: var(--white)) {
+	&::-webkit-scrollbar {
+		width: $width;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $track_bg;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $thumb_bg;
+		border-radius: 6px;
 	}
 }

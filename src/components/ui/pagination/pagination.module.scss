@@ -1,0 +1,59 @@
+// TODO: Сделать vars как и у кнопок
+.pagination {
+	&-list {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+	&-list__item {
+		margin: 0px;
+		display: flex;
+		align-items: center;
+	}
+	&__btn {
+		background-color: transparent;
+		width: 24px;
+		height: 24px;
+		padding: 0px;
+		border-radius: 24px;
+		cursor: pointer;
+		color: var(--dark-blue);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition:
+			color 300ms ease,
+			background-color 300ms ease;
+		text-decoration: none;
+		font-size: toRem(12);
+		font-weight: 500;
+		&_active {
+			background-color: var(--dark-blue);
+			color: var(--white);
+		}
+		svg {
+			transition:
+				color 300ms ease,
+				background-color 300ms ease,
+				fill 300ms ease;
+		}
+		@media (hover: hover) {
+			&:hover {
+				color: var(--hover);
+				transition:
+					color 300ms ease,
+					background-color 300ms ease;
+				&.pagination__btn_active {
+					color: var(--white);
+				}
+				svg {
+					transition:
+						color 300ms ease,
+						background-color 300ms ease,
+						fill 300ms ease;
+					fill: var(--hover);
+				}
+			}
+		}
+	}
+}

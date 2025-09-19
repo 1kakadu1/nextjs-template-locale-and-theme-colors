@@ -19,15 +19,45 @@ export type TypographyElementWeight =
 	| 700
 	| 800
 	| 900;
-//export type TypographyElementColor = 'white' | 'dark' | 'gray' | 'dark-light';
+export type TypographyElementFontSize =
+	| 10
+	| 12
+	| 14
+	| 16
+	| 18
+	| 20
+	| 22
+	| 24
+	| 26
+	| 28
+	| 32
+	| 40;
+export type TypographyElementColor =
+	| 'white'
+	| 'dark'
+	| 'gray'
+	| 'default'
+	| 'link'
+	| 'accent'
+	| 'primary'
+	| 'secondary'
+	| 'gray-light'
+	| 'dark-blue'
+	| 'gray-secondary'
+	| 'hover'
+	| 'active';
+export type TypographyElementLineHeight = 'normal' | 120 | 140 | number;
+
 export interface TypographyBaseProps<T = ReactNode> {
 	weight?: TypographyElementWeight;
 	elementClass?: TypographyElement;
 	children: T;
-	//color?: TypographyElementColor;
+	color?: TypographyElementColor;
+	fontSize?: TypographyElementFontSize;
+	lineHeight?: TypographyElementLineHeight;
 }
 
-export type RenderPorpsType<T> = Omit<TypographyBaseProps, 'children'> &
+export type RenderPropsType<T> = Omit<TypographyBaseProps, 'children'> &
 	HTMLAttributes<T> & {
 		render: (
 			props: Omit<TypographyBaseProps, 'children'> & HTMLAttributes<T>,

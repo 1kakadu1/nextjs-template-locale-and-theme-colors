@@ -62,7 +62,7 @@ div.tags {
 	grid-template-columns: 0.8fr 1fr;
 	gap: 20px;
 	grid-template-rows: auto;
-	@include min-descktop {
+	@include min-desktop {
 		grid-template-columns: 0.6fr 1.4fr;
 	}
 }

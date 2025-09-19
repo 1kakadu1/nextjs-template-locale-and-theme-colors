@@ -1,0 +1,46 @@
+// TODO: Сделать vars как и у кнопок
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px 8px;
+	&__separator {
+		color: var(--text-text-secondary);
+		font-size: toRem(14);
+		font-weight: 500;
+	}
+	&__item {
+		color: var(--text-text-secondary);
+		transition: color 300ms ease;
+		font-size: toRem(12);
+		font-weight: 500;
+		@media (min-width: 768px) {
+			font-size: toRem(14);
+			overflow: hidden;
+			white-space: nowrap;
+			max-width: 200px;
+			text-overflow: ellipsis;
+		}
+		@media (min-width: 932px) {
+			max-width: max-content;
+		}
+	}
+	&__link {
+		text-decoration: none;
+		@media (hover: hover) {
+			&:hover {
+				transition: color 300ms ease;
+				color: var(--hover);
+			}
+		}
+	}
+	@media (min-width: 768px) {
+		flex-wrap: nowrap;
+	}
+}
+
+.breadcrumbs__item__group {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}

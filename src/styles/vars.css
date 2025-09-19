@@ -74,6 +74,31 @@
         font: --font-Manrope
         font: --font-work-sans
     */
+
+	
+		/* END INPUTS */
+		/* marquee */
+		--marquee-bg: var(--primary);
+		--marquee-color: var(--white);
+		/* BTN GROUP */
+		--button-group: var(--light);
+		--button-group-btn: var(--white);
+		--button-group-label: var(--gray-secondary);
+		--button-group-label-active: var(--white);
+		--button-group-active: var(--dark-blue);
+		--button-group-label-hover: var(--hover);
+		/* ------------- */
+		--button-group-big-label: #000;
+		--button-group-big: #f7f7f7;
+		--button-group-big-label-active: var(--white);
+		--button-group-big-active: #019fcc;
+		--button-group-big-label-hover: var(--hover);
+		/* ------------- */
+		--button-group-light-label: var(--text-text-secondary);
+		--button-group-light: var(--background-secondary);
+		--button-group-light-btn: var(--white);
+		--button-group-light-label-active: var(--white);
+		--button-group-light-active: var(--light-blue);
 }
 
 /* DARK THEME */
